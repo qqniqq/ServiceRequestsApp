@@ -9,33 +9,19 @@ namespace ServiceRequestsApp
     {
         private const string connectionString = "Data Source=requests.db";
 
-        public MainForm()
+        private string currentUser;
+        private string currentRole;
+
+        public MainForm(string fullName, string role)
         {
             InitializeComponent();
-            CreateDatabase();
-            LoadRequests();
-        }
-        private void CreateDatabase()
-        {
-            using (var connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-                string sql =
-                @"CREATE TABLE IF NOT EXISTS Requests (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    FullName TEXT,
-                    Department TEXT,
-                    Contact TEXT,
-                    DateCreated TEXT,
-                    ProblemType TEXT,
-                    Description TEXT,
-                    Priority TEXT,
-                    Specialist TEXT,
-                    Status TEXT
-                )";
 
-                new SQLiteCommand(sql, connection).ExecuteNonQuery();
-            }
+            currentUser = fullName;
+            currentRole = role;
+
+            lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
+
+            LoadRequests();
         }
         private void LoadRequests()
         {
@@ -81,7 +67,7 @@ namespace ServiceRequestsApp
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            SearchRequests(txtSearch.Text);
+           
         }
         private void MainForm_Load(object sender, EventArgs e)
         {
@@ -125,7 +111,7 @@ namespace ServiceRequestsApp
         SELECT 
             COUNT(*) AS Total,
             SUM(CASE WHEN Status = 'Новая' THEN 1 ELSE 0 END) AS NewCount,
-            SUM(CASE WHEN Status = 'Выполняется' THEN 1 ELSE 0 END) AS WorkCount,
+            SUM(CASE WHEN Status = 'В работе' THEN 1 ELSE 0 END) AS WorkCount,
             SUM(CASE WHEN Status = 'Выполнена' THEN 1 ELSE 0 END) AS DoneCount
         FROM Requests";
 
@@ -137,12 +123,24 @@ namespace ServiceRequestsApp
                     string report =
                         $"Всего заявок: {reader["Total"]}\n" +
                         $"Новые: {reader["NewCount"]}\n" +
-                        $"Выполняется: {reader["WorkCount"]}\n" +
+                        $"В работе: {reader["WorkCount"]}\n" +
                         $"Выполненные: {reader["DoneCount"]}";
 
                     MessageBox.Show(report, "Отчёт по заявкам");
                 }
             }
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Close();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchRequests(txtSearch.Text); 
         }
     }
 }

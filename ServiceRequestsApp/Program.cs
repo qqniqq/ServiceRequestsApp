@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ServiceRequestsLib;
+
 
 namespace ServiceRequestsApp
 {
@@ -16,7 +18,10 @@ namespace ServiceRequestsApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            DatabaseInitializer.Initialize();
+            System.Threading.Thread.Sleep(100);
+            Application.Run(new LoginForm());
+
         }
     }
 }

@@ -43,6 +43,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.comboDepartment = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFullName
@@ -189,11 +190,22 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Ответственный специалист";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(393, 13);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 36);
+            this.btnBack.TabIndex = 16;
+            this.btnBack.Text = "назад";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // AddRequestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 497);
+            this.ClientSize = new System.Drawing.Size(492, 497);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboDepartment);
             this.Controls.Add(this.label6);
@@ -235,5 +247,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox comboDepartment;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnBack;
     }
 }

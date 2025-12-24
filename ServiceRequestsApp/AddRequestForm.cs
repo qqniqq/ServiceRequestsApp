@@ -40,9 +40,20 @@ namespace ServiceRequestsApp
 
                 cmd.ExecuteNonQuery();
             }
-
             MessageBox.Show("Заявка успешно добавлена");
             Close();
+
+            if (txtFullName.Text.Length < 5 || txtFullName.Text.Length > 100)
+            {
+                MessageBox.Show("ФИО должно быть от 5 до 100 символов");
+                return;
+            }
+
+            if (txtDescription.Text.Length < 10 || txtDescription.Text.Length > 500)
+            {
+                MessageBox.Show("Описание должно быть от 10 до 500 символов");
+                return;
+            }
         }
 
         private void comboDepartment_SelectedIndexChanged(object sender, EventArgs e)
@@ -53,6 +64,11 @@ namespace ServiceRequestsApp
         private void txtDescription_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
