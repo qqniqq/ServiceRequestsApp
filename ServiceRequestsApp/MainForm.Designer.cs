@@ -56,6 +56,7 @@
             this.btnAddRequest.TabIndex = 1;
             this.btnAddRequest.Text = "Добавить заявку";
             this.btnAddRequest.UseVisualStyleBackColor = true;
+            this.btnAddRequest.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
             // MainForm
             // 
@@ -68,6 +69,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MainForm";
             this.Text = "Учет заявок на обслуживание техники";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).EndInit();
             this.ResumeLayout(false);
 
