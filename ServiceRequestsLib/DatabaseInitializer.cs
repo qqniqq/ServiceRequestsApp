@@ -56,7 +56,7 @@ namespace ServiceRequestsApp
     INSERT INTO Users (Login, Password, FullName, Role)
     VALUES
     ('admin', 'admin123', 'Администратор', 'Специалист IT'),
-    ('user', 'user123', 'Обычный сотрудник', 'Сотрудник')";
+    ('user', 'user123', 'Пользователь', 'Сотрудник')";
 
                     new SQLiteCommand(insertUsers, connection).ExecuteNonQuery();
                 }

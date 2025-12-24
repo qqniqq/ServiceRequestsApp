@@ -21,8 +21,19 @@ namespace ServiceRequestsApp
 
             lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
 
+            ApplyRolePermissions();
             LoadRequests();
         }
+        private void ApplyRolePermissions()
+        {
+            if (currentRole != "Специалист IT")
+            {
+                comboStatus.Visible = false;
+                btnUpdateStatus.Visible = false;
+                btnReport.Visible = false;
+            }
+        }
+
         private void LoadRequests()
         {
             using (var adapter = new SQLiteDataAdapter("SELECT * FROM Requests", connectionString))
@@ -99,6 +110,29 @@ namespace ServiceRequestsApp
 
             LoadRequests();
             MessageBox.Show("Статус заявки изменён");
+
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для изменения статуса заявки");
+                return;
+            }
+
+        }
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Hide();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            SearchRequests(txtSearch.Text); 
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
 
         private void btnReport_Click(object sender, EventArgs e)
@@ -108,12 +142,12 @@ namespace ServiceRequestsApp
                 connection.Open();
 
                 string sql = @"
-        SELECT 
-            COUNT(*) AS Total,
-            SUM(CASE WHEN Status = 'Новая' THEN 1 ELSE 0 END) AS NewCount,
-            SUM(CASE WHEN Status = 'В работе' THEN 1 ELSE 0 END) AS WorkCount,
-            SUM(CASE WHEN Status = 'Выполнена' THEN 1 ELSE 0 END) AS DoneCount
-        FROM Requests";
+SELECT 
+    COUNT(*) AS Total,
+    SUM(CASE WHEN Status = 'Новая' THEN 1 ELSE 0 END) AS NewCount,
+    SUM(CASE WHEN Status = 'В работе' THEN 1 ELSE 0 END) AS WorkCount,
+    SUM(CASE WHEN Status = 'Выполнена' THEN 1 ELSE 0 END) AS DoneCount
+FROM Requests";
 
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 SQLiteDataReader reader = cmd.ExecuteReader();
@@ -129,18 +163,6 @@ namespace ServiceRequestsApp
                     MessageBox.Show(report, "Отчёт по заявкам");
                 }
             }
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Close();
-        }
-
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            SearchRequests(txtSearch.Text); 
         }
     }
 }

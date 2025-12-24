@@ -73,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddRequestForm.asa-TZ.resx">
+      <DependentUpon>AddRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddRequestForm.resx">
       <DependentUpon>AddRequestForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -33,15 +33,17 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.btnUpdateStatus = new System.Windows.Forms.Button();
-            this.btnReport = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLogout = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewRequests
             // 
+            this.dataGridViewRequests.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.Location = new System.Drawing.Point(0, 80);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4);
@@ -49,14 +51,14 @@
             this.dataGridViewRequests.ReadOnly = true;
             this.dataGridViewRequests.RowHeadersWidth = 51;
             this.dataGridViewRequests.RowTemplate.Height = 24;
-            this.dataGridViewRequests.Size = new System.Drawing.Size(1054, 405);
+            this.dataGridViewRequests.Size = new System.Drawing.Size(1781, 665);
             this.dataGridViewRequests.TabIndex = 0;
             // 
             // btnAddRequest
             // 
             this.btnAddRequest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRequest.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddRequest.Location = new System.Drawing.Point(0, 492);
+            this.btnAddRequest.Location = new System.Drawing.Point(12, 753);
             this.btnAddRequest.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRequest.Name = "btnAddRequest";
             this.btnAddRequest.Size = new System.Drawing.Size(224, 44);
@@ -70,13 +72,13 @@
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtSearch.HideSelection = false;
-            this.txtSearch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtSearch.Location = new System.Drawing.Point(12, 37);
             this.txtSearch.MaxLength = 50;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(268, 27);
             this.txtSearch.TabIndex = 2;
             this.txtSearch.Tag = "поиск по ФИО/Подразделению";
+            this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // comboStatus
@@ -86,9 +88,9 @@
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
             "Новая",
-            "Выполняется",
+            "В работе",
             "Выполнена"});
-            this.comboStatus.Location = new System.Drawing.Point(381, 11);
+            this.comboStatus.Location = new System.Drawing.Point(569, 12);
             this.comboStatus.Name = "comboStatus";
             this.comboStatus.Size = new System.Drawing.Size(144, 25);
             this.comboStatus.TabIndex = 4;
@@ -96,8 +98,9 @@
             // 
             // btnUpdateStatus
             // 
+            this.btnUpdateStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateStatus.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnUpdateStatus.Location = new System.Drawing.Point(381, 42);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(569, 43);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
             this.btnUpdateStatus.Size = new System.Drawing.Size(144, 31);
             this.btnUpdateStatus.TabIndex = 5;
@@ -105,21 +108,11 @@
             this.btnUpdateStatus.UseVisualStyleBackColor = true;
             this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
             // 
-            // btnReport
-            // 
-            this.btnReport.Location = new System.Drawing.Point(921, 492);
-            this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(122, 44);
-            this.btnReport.TabIndex = 6;
-            this.btnReport.Text = "отчёт";
-            this.btnReport.UseVisualStyleBackColor = true;
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblUser.Location = new System.Drawing.Point(755, 9);
+            this.lblUser.Location = new System.Drawing.Point(1045, 18);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(60, 19);
             this.lblUser.TabIndex = 7;
@@ -127,11 +120,12 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(971, 37);
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Location = new System.Drawing.Point(1049, 43);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(72, 31);
+            this.btnLogout.Size = new System.Drawing.Size(284, 31);
             this.btnLogout.TabIndex = 8;
-            this.btnLogout.Text = "выйти";
+            this.btnLogout.Text = "выйти на форму авторизации";
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
@@ -145,24 +139,41 @@
             this.label1.TabIndex = 9;
             this.label1.Text = "поиск по ФИО/Подразделению:";
             // 
+            // btnReport
+            // 
+            this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReport.Location = new System.Drawing.Point(519, 753);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(99, 44);
+            this.btnReport.TabIndex = 10;
+            this.btnReport.Text = "отчёт";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 619);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.ClientSize = new System.Drawing.Size(1785, 877);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnUpdateStatus);
             this.Controls.Add(this.comboStatus);
             this.Controls.Add(this.btnAddRequest);
             this.Controls.Add(this.dataGridViewRequests);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Учет заявок на обслуживание техники";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).EndInit();
             this.ResumeLayout(false);
@@ -177,10 +188,10 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.ComboBox comboStatus;
         private System.Windows.Forms.Button btnUpdateStatus;
-        private System.Windows.Forms.Button btnReport;
         private System.Windows.Forms.Label lblUser;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnReport;
     }
 }
 
