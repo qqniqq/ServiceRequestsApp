@@ -29,7 +29,7 @@ namespace ServiceRequestsApp
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
 
                 cmd.Parameters.AddWithValue("@FullName", txtFullName.Text);
-                cmd.Parameters.AddWithValue("@Department", txtDepartment.Text);
+                cmd.Parameters.AddWithValue("@Department", comboDepartment.Text);
                 cmd.Parameters.AddWithValue("@Contact", txtContact.Text);
                 cmd.Parameters.AddWithValue("@DateCreated", DateTime.Now.ToString());
                 cmd.Parameters.AddWithValue("@ProblemType", txtProblemType.Text);
@@ -43,6 +43,16 @@ namespace ServiceRequestsApp
 
             MessageBox.Show("Заявка успешно добавлена");
             Close();
+        }
+
+        private void comboDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescription_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

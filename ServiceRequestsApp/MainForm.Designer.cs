@@ -34,6 +34,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.comboStatus = new System.Windows.Forms.ComboBox();
             this.btnUpdateStatus = new System.Windows.Forms.Button();
+            this.btnReport = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewRequests)).BeginInit();
             this.SuspendLayout();
             // 
@@ -43,6 +44,7 @@
             this.dataGridViewRequests.Location = new System.Drawing.Point(0, 42);
             this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
+            this.dataGridViewRequests.ReadOnly = true;
             this.dataGridViewRequests.RowHeadersWidth = 51;
             this.dataGridViewRequests.RowTemplate.Height = 24;
             this.dataGridViewRequests.Size = new System.Drawing.Size(1100, 406);
@@ -80,6 +82,7 @@
             // 
             // comboStatus
             // 
+            this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
             "Новая",
@@ -101,11 +104,22 @@
             this.btnUpdateStatus.UseVisualStyleBackColor = true;
             this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
             // 
+            // btnReport
+            // 
+            this.btnReport.Location = new System.Drawing.Point(966, 465);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(122, 35);
+            this.btnReport.TabIndex = 6;
+            this.btnReport.Text = "Отчёт";
+            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1100, 619);
+            this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnUpdateStatus);
             this.Controls.Add(this.comboStatus);
             this.Controls.Add(this.btnSearch);
@@ -131,6 +145,7 @@
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox comboStatus;
         private System.Windows.Forms.Button btnUpdateStatus;
+        private System.Windows.Forms.Button btnReport;
     }
 }
 

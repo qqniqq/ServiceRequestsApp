@@ -44,6 +44,8 @@ namespace ServiceRequestsApp
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 dataGridViewRequests.DataSource = table;
+                dataGridViewRequests.ReadOnly = true;
+                dataGridViewRequests.AllowUserToAddRows = false;
 
                 dataGridViewRequests.Columns["Id"].HeaderText = "ID";
                 dataGridViewRequests.Columns["FullName"].HeaderText = "ФИО сотрудника";
@@ -111,6 +113,36 @@ namespace ServiceRequestsApp
 
             LoadRequests();
             MessageBox.Show("Статус заявки изменён");
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string sql = @"
+        SELECT 
+            COUNT(*) AS Total,
+            SUM(CASE WHEN Status = 'Новая' THEN 1 ELSE 0 END) AS NewCount,
+            SUM(CASE WHEN Status = 'Выполняется' THEN 1 ELSE 0 END) AS WorkCount,
+            SUM(CASE WHEN Status = 'Выполнена' THEN 1 ELSE 0 END) AS DoneCount
+        FROM Requests";
+
+                SQLiteCommand cmd = new SQLiteCommand(sql, connection);
+                SQLiteDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    string report =
+                        $"Всего заявок: {reader["Total"]}\n" +
+                        $"Новые: {reader["NewCount"]}\n" +
+                        $"Выполняется: {reader["WorkCount"]}\n" +
+                        $"Выполненные: {reader["DoneCount"]}";
+
+                    MessageBox.Show(report, "Отчёт по заявкам");
+                }
+            }
         }
     }
 }
