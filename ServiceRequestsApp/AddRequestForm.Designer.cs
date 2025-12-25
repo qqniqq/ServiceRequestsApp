@@ -165,7 +165,7 @@
             // 
             resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.comboSpecialist);
             this.Controls.Add(this.comboProblemType);
             this.Controls.Add(this.label7);

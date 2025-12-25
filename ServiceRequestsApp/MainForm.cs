@@ -70,53 +70,32 @@ namespace ServiceRequestsApp
                 connectionString))
             {
                 adapter.SelectCommand.Parameters.AddWithValue("@text", "%" + searchText + "%");
-
                 DataTable table = new DataTable();
                 adapter.Fill(table);
                 dataGridViewRequests.DataSource = table;
             }
         }
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-           
-        }
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
             if (dataGridViewRequests.CurrentRow == null)
                 return;
-
             int id = Convert.ToInt32(dataGridViewRequests.CurrentRow.Cells["Id"].Value);
-
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-
                 string sql = "UPDATE Requests SET Status = @Status WHERE Id = @Id";
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@Status", comboStatus.Text);
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.ExecuteNonQuery();
             }
-
             LoadRequests();
             MessageBox.Show("Статус заявки изменён");
-
             if (currentRole != "Специалист IT")
             {
                 MessageBox.Show("Недостаточно прав для изменения статуса заявки");
                 return;
             }
-
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -124,17 +103,14 @@ namespace ServiceRequestsApp
             login.Show();
             this.Hide();
         }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
             SearchRequests(txtSearch.Text); 
         }
-
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
-
         private void btnReport_Click(object sender, EventArgs e)
         {
             using (var connection = new SQLiteConnection(connectionString))
@@ -163,6 +139,15 @@ FROM Requests";
                     MessageBox.Show(report, "Отчёт по заявкам");
                 }
             }
+        }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+        }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+        }
+        private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -7,7 +7,6 @@ namespace ServiceRequestsApp
     public partial class AddRequestForm : Form
     {
         private const string connectionString = "Data Source=requests.db";
-
         public AddRequestForm()
         {
             InitializeComponent();
@@ -16,7 +15,6 @@ namespace ServiceRequestsApp
             comboProblemType.SelectedIndex = -1;
             comboSpecialist.SelectedIndex = -1;
         }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtFullName.Text))
@@ -25,68 +23,57 @@ namespace ServiceRequestsApp
                 txtFullName.Focus();
                 return;
             }
-
             if (txtFullName.Text.Trim().Length < 5 || txtFullName.Text.Trim().Length > 100)
             {
                 MessageBox.Show("ФИО должно быть от 5 до 100 символов");
                 txtFullName.Focus();
                 return;
             }
-
             if (comboDepartment.SelectedIndex == -1)
             {
                 MessageBox.Show("Выберите подразделение");
                 comboDepartment.Focus();
                 return;
             }
-
             if (string.IsNullOrWhiteSpace(txtContact.Text))
             {
                 MessageBox.Show("Введите контактные данные");
                 txtContact.Focus();
                 return;
             }
-
             if (comboProblemType.SelectedIndex == -1)
             {
                 MessageBox.Show("Выберите тип неисправности");
                 comboProblemType.Focus();
                 return;
             }
-
             if (comboSpecialist.SelectedIndex == -1)
             {
                 MessageBox.Show("Выберите ответственного специалиста");
                 comboSpecialist.Focus();
                 return;
             }
-
-
             if (string.IsNullOrWhiteSpace(txtDescription.Text))
             {
                 MessageBox.Show("Введите описание проблемы");
                 txtDescription.Focus();
                 return;
             }
-
             if (txtDescription.Text.Trim().Length < 10)
             {
                 MessageBox.Show("Описание проблемы должно быть не менее 10 символов");
                 txtDescription.Focus();
                 return;
             }
-
             if (comboPriority.SelectedIndex == -1)
             {
                 MessageBox.Show("Выберите приоритет заявки");
                 comboPriority.Focus();
                 return;
             }
-
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-
                 string sql =
                 @"INSERT INTO Requests 
                 (FullName, Department, Contact, DateCreated, ProblemType, Description, Priority, Specialist, Status)
@@ -109,20 +96,17 @@ namespace ServiceRequestsApp
             }
             MessageBox.Show("Заявка успешно добавлена");
             Close();
-
             if (txtFullName.Text.Length < 5 || txtFullName.Text.Length > 100)
             {
                 MessageBox.Show("ФИО должно быть от 5 до 100 символов");
                 return;
             }
-
             if (txtDescription.Text.Length < 10 || txtDescription.Text.Length > 500)
             {
                 MessageBox.Show("Описание должно быть от 10 до 500 символов");
                 return;
             }
         }
-
         private void comboDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
 

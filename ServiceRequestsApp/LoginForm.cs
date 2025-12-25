@@ -26,18 +26,15 @@ namespace ServiceRequestsApp
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-
                 string sql = "SELECT FullName, Role FROM Users WHERE Login=@login AND Password=@password";
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@login", txtLogin.Text);
                 cmd.Parameters.AddWithValue("@password", txtPassword.Text);
-
                 var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
                     string fullName = reader["FullName"].ToString();
                     string role = reader["Role"].ToString();
-
                     MainForm main = new MainForm(fullName, role);
                     main.Show();
                     this.Hide();
@@ -48,7 +45,6 @@ namespace ServiceRequestsApp
                 }
             }
         }
-
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
