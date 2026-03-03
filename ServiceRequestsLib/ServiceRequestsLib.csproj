@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DatabaseInitializer.cs" />
     <Compile Include="ServiceRequest.cs" />
+    <Compile Include="TestableLogic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
