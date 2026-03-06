@@ -56,15 +56,18 @@
             // 
             // btnAddRequest
             // 
+            this.btnAddRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(240)))), ((int)(((byte)(209)))));
             this.btnAddRequest.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAddRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRequest.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddRequest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(196)))), ((int)(((byte)(31)))), ((int)(((byte)(63)))));
             this.btnAddRequest.Location = new System.Drawing.Point(12, 753);
             this.btnAddRequest.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRequest.Name = "btnAddRequest";
             this.btnAddRequest.Size = new System.Drawing.Size(224, 44);
             this.btnAddRequest.TabIndex = 1;
-            this.btnAddRequest.Text = "добавить заявку";
-            this.btnAddRequest.UseVisualStyleBackColor = true;
+            this.btnAddRequest.Text = "➕ добавить заявку";
+            this.btnAddRequest.UseVisualStyleBackColor = false;
             this.btnAddRequest.Click += new System.EventHandler(this.btnAddRequest_Click);
             // 
             // txtSearch
@@ -98,14 +101,17 @@
             // 
             // btnUpdateStatus
             // 
+            this.btnUpdateStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(240)))), ((int)(((byte)(209)))));
             this.btnUpdateStatus.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStatus.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnUpdateStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(78)))), ((int)(((byte)(64)))));
             this.btnUpdateStatus.Location = new System.Drawing.Point(569, 43);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
             this.btnUpdateStatus.Size = new System.Drawing.Size(144, 31);
             this.btnUpdateStatus.TabIndex = 5;
             this.btnUpdateStatus.Text = "Изменить статус";
-            this.btnUpdateStatus.UseVisualStyleBackColor = true;
+            this.btnUpdateStatus.UseVisualStyleBackColor = false;
             this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
             // 
             // lblUser
@@ -120,13 +126,16 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(240)))), ((int)(((byte)(209)))));
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(78)))), ((int)(((byte)(64)))));
             this.btnLogout.Location = new System.Drawing.Point(1049, 43);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(284, 31);
             this.btnLogout.TabIndex = 8;
             this.btnLogout.Text = "выйти на форму авторизации";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.UseVisualStyleBackColor = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // label1
@@ -141,15 +150,18 @@
             // 
             // btnReport
             // 
+            this.btnReport.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(240)))), ((int)(((byte)(209)))));
             this.btnReport.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(78)))), ((int)(((byte)(64)))));
             this.btnReport.Location = new System.Drawing.Point(519, 753);
             this.btnReport.Margin = new System.Windows.Forms.Padding(4);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(99, 44);
             this.btnReport.TabIndex = 10;
             this.btnReport.Text = "отчёт";
-            this.btnReport.UseVisualStyleBackColor = true;
+            this.btnReport.UseVisualStyleBackColor = false;
             this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // MainForm
@@ -157,6 +169,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1785, 877);
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSearch);
