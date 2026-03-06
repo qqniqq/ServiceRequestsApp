@@ -77,9 +77,15 @@
             // btnSave
             // 
             resources.ApplyResources(this.btnSave, "btnSave");
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(240)))), ((int)(((byte)(209)))));
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(218)))), ((int)(((byte)(184)))));
+            this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(145)))), ((int)(((byte)(223)))), ((int)(((byte)(191)))));
+            this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(186)))), ((int)(((byte)(245)))), ((int)(((byte)(218)))));
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(78)))), ((int)(((byte)(64)))));
             this.btnSave.Name = "btnSave";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label1
@@ -166,6 +172,7 @@
             resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.comboSpecialist);
             this.Controls.Add(this.comboProblemType);
             this.Controls.Add(this.label7);
@@ -181,6 +188,7 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtFullName);
+            this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.Name = "AddRequestForm";
