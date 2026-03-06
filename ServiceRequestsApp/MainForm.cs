@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SQLite;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace ServiceRequestsApp
@@ -22,6 +23,7 @@ namespace ServiceRequestsApp
             lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
 
             ApplyRolePermissions();
+            ConfigureTableAppearance();
             LoadRequests();
         }
         private void ApplyRolePermissions()
@@ -31,6 +33,46 @@ namespace ServiceRequestsApp
                 comboStatus.Visible = false;
                 btnUpdateStatus.Visible = false;
                 btnReport.Visible = false;
+            }
+        }
+
+        private void ConfigureTableAppearance()
+        {
+            dataGridViewRequests.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewRequests.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewRequests.MultiSelect = false;
+            dataGridViewRequests.RowHeadersVisible = false;
+            dataGridViewRequests.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridViewRequests.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            dataGridViewRequests.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
+            dataGridViewRequests.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(226, 245, 238);
+            dataGridViewRequests.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(29, 82, 68);
+            dataGridViewRequests.EnableHeadersVisualStyles = false;
+            dataGridViewRequests.CellFormatting -= DataGridViewRequests_CellFormatting;
+            dataGridViewRequests.CellFormatting += DataGridViewRequests_CellFormatting;
+        }
+
+        private void DataGridViewRequests_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridViewRequests.Columns[e.ColumnIndex].Name != "Status" || e.Value == null)
+                return;
+
+            string status = e.Value.ToString();
+            if (status == "Новая")
+            {
+                e.CellStyle.BackColor = Color.FromArgb(231, 244, 255);
+                e.CellStyle.ForeColor = Color.FromArgb(26, 79, 124);
+            }
+            else if (status == "В работе")
+            {
+                e.CellStyle.BackColor = Color.FromArgb(255, 244, 227);
+                e.CellStyle.ForeColor = Color.FromArgb(128, 83, 16);
+            }
+            else if (status == "Выполнена")
+            {
+                e.CellStyle.BackColor = Color.FromArgb(228, 248, 236);
+                e.CellStyle.ForeColor = Color.FromArgb(31, 97, 55);
             }
         }
 
@@ -54,6 +96,10 @@ namespace ServiceRequestsApp
                 dataGridViewRequests.Columns["Priority"].HeaderText = "Приоритет";
                 dataGridViewRequests.Columns["Specialist"].HeaderText = "Ответственный";
                 dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
+
+                dataGridViewRequests.Columns["Id"].FillWeight = 40;
+                dataGridViewRequests.Columns["Description"].FillWeight = 170;
+                dataGridViewRequests.Columns["DateCreated"].DefaultCellStyle.Format = "g";
             }
         }
 
@@ -77,8 +123,24 @@ namespace ServiceRequestsApp
         }
         private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
-            if (dataGridViewRequests.CurrentRow == null)
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для изменения статуса заявки");
                 return;
+            }
+
+            if (dataGridViewRequests.CurrentRow == null)
+            {
+                MessageBox.Show("Выберите заявку для изменения статуса");
+                return;
+            }
+
+            if (string.IsNullOrWhiteSpace(comboStatus.Text))
+            {
+                MessageBox.Show("Выберите новый статус");
+                return;
+            }
+
             int id = Convert.ToInt32(dataGridViewRequests.CurrentRow.Cells["Id"].Value);
             using (var connection = new SQLiteConnection(connectionString))
             {
@@ -89,13 +151,9 @@ namespace ServiceRequestsApp
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.ExecuteNonQuery();
             }
+
             LoadRequests();
             MessageBox.Show("Статус заявки изменён");
-            if (currentRole != "Специалист IT")
-            {
-                MessageBox.Show("Недостаточно прав для изменения статуса заявки");
-                return;
-            }
         }
         private void btnLogout_Click(object sender, EventArgs e)
         {

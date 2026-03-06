@@ -85,7 +85,7 @@ namespace ServiceRequestsApp
                 cmd.Parameters.AddWithValue("@FullName", txtFullName.Text);
                 cmd.Parameters.AddWithValue("@Department", comboDepartment.Text);
                 cmd.Parameters.AddWithValue("@Contact", txtContact.Text);
-                cmd.Parameters.AddWithValue("@DateCreated", DateTime.Now.ToString());
+                cmd.Parameters.AddWithValue("@DateCreated", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 cmd.Parameters.AddWithValue("@ProblemType", comboProblemType.Text);
                 cmd.Parameters.AddWithValue("@Description", txtDescription.Text);
                 cmd.Parameters.AddWithValue("@Priority", comboPriority.Text);
@@ -96,16 +96,6 @@ namespace ServiceRequestsApp
             }
             MessageBox.Show("Заявка успешно добавлена");
             Close();
-            if (txtFullName.Text.Length < 5 || txtFullName.Text.Length > 100)
-            {
-                MessageBox.Show("ФИО должно быть от 5 до 100 символов");
-                return;
-            }
-            if (txtDescription.Text.Length < 10 || txtDescription.Text.Length > 500)
-            {
-                MessageBox.Show("Описание должно быть от 10 до 500 символов");
-                return;
-            }
         }
         private void comboDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
