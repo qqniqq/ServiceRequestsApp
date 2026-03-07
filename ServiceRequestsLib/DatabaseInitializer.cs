@@ -55,16 +55,26 @@ namespace ServiceRequestsApp
                     string insertUsers = @"
     INSERT INTO Users (Login, Password, FullName, Role)
     VALUES
-    ('admin', 'admin123', 'Администратор', 'Специалист IT'),
-    ('user', 'user123', 'Пользователь', 'Сотрудник')";
+    ('admin', '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9', 'Администратор', 'Специалист IT'),
+    ('user', 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446', 'Пользователь', 'Сотрудник')";
 
                     new SQLiteCommand(insertUsers, connection).ExecuteNonQuery();
                 }
 
+
+                string migratePlainPasswords = @"
+    UPDATE Users
+    SET Password = CASE
+        WHEN Login = 'admin' AND Password = 'admin123' THEN '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9'
+        WHEN Login = 'user' AND Password = 'user123' THEN 'e606e38b0d8c19b24cf0ee3808183162ea7cd63ff7912dbb22b5e803286b4446'
+        ELSE Password
+    END";
+                new SQLiteCommand(migratePlainPasswords, connection).ExecuteNonQuery();
+
                 string checkRequests = "SELECT COUNT(*) FROM Requests";
                 long requestsCount = (long)new SQLiteCommand(checkRequests, connection).ExecuteScalar();
 
-                if (requestsCount == 0)
+                if (requestsCount < 10)
                 {
                     string insertRequests = @"
     INSERT INTO Requests (FullName, Department, Contact, DateCreated, ProblemType, Description, Priority, Specialist, Status)
@@ -78,6 +88,7 @@ namespace ServiceRequestsApp
 
                     new SQLiteCommand(insertRequests, connection).ExecuteNonQuery();
                 }
+
 
             }
         }

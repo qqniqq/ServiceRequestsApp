@@ -44,6 +44,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.comboProblemType = new System.Windows.Forms.ComboBox();
             this.comboSpecialist = new System.Windows.Forms.ComboBox();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFullName
@@ -167,12 +168,27 @@
             resources.GetString("comboSpecialist.Items2")});
             this.comboSpecialist.Name = "comboSpecialist";
             // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(88)))), ((int)(((byte)(106)))));
+            this.btnCancel.Location = new System.Drawing.Point(251, 445);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(146, 37);
+            this.btnCancel.TabIndex = 17;
+            this.btnCancel.Text = "Отмена";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // AddRequestForm
             // 
             resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.comboSpecialist);
             this.Controls.Add(this.comboProblemType);
             this.Controls.Add(this.label7);
@@ -214,5 +230,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboProblemType;
         private System.Windows.Forms.ComboBox comboSpecialist;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

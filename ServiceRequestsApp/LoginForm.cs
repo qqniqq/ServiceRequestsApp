@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Data.SQLite;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace ServiceRequestsApp
@@ -27,18 +29,28 @@ namespace ServiceRequestsApp
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-                string sql = "SELECT FullName, Role FROM Users WHERE Login=@login AND Password=@password";
+                string sql = "SELECT FullName, Role, Password FROM Users WHERE Login=@login";
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@login", txtLogin.Text);
-                cmd.Parameters.AddWithValue("@password", txtPassword.Text);
                 var reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    string fullName = reader["FullName"].ToString();
-                    string role = reader["Role"].ToString();
-                    MainForm main = new MainForm(fullName, role);
-                    main.Show();
-                    this.Hide();
+                    string storedPassword = reader["Password"].ToString();
+                    string inputHash = ComputeSha256(txtPassword.Text);
+                    bool isPasswordValid = storedPassword == inputHash || storedPassword == txtPassword.Text;
+
+                    if (isPasswordValid)
+                    {
+                        string fullName = reader["FullName"].ToString();
+                        string role = reader["Role"].ToString();
+                        MainForm main = new MainForm(fullName, role);
+                        main.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль");
+                    }
                 }
                 else
                 {
@@ -46,6 +58,20 @@ namespace ServiceRequestsApp
                 }
             }
         }
+        private static string ComputeSha256(string value)
+        {
+            using (SHA256 sha = SHA256.Create())
+            {
+                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(value));
+                StringBuilder sb = new StringBuilder();
+                foreach (byte b in bytes)
+                {
+                    sb.Append(b.ToString("x2"));
+                }
+                return sb.ToString();
+            }
+        }
+
         private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
