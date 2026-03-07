@@ -10,6 +10,7 @@ namespace ServiceRequestsApp
         public LoginForm()
         {
             InitializeComponent();
+            this.AcceptButton = btnLogin;
         }
         private void btnLogin_Click(object sender, EventArgs e)
         {
