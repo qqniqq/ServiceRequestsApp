@@ -12,8 +12,8 @@ namespace ServiceRequestsApp
     {
         private const string connectionString = "Data Source=requests.db";
 
-        private string currentUser;
-        private string currentRole;
+        private readonly string currentUser;
+        private readonly string currentRole;
 
         public MainForm(string fullName, string role)
         {
@@ -21,16 +21,17 @@ namespace ServiceRequestsApp
 
             currentUser = fullName;
             currentRole = role;
+            lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
 
-            lblUser.Text = $"{currentUser} ({currentRole})";
+            dateFrom.Value = DateTime.Today.AddDays(-7);
+            dateTo.Value = DateTime.Today;
 
             ApplyRolePermissions();
             ConfigureTableAppearance();
-            dateFrom.Value = DateTime.Today.AddDays(-7);
-            dateTo.Value = DateTime.Today;
             dataGridViewRequests.CellDoubleClick += dataGridViewRequests_CellDoubleClick;
             LoadRequests();
         }
+
         private void ApplyRolePermissions()
         {
             if (currentRole != "Специалист IT")
@@ -49,6 +50,9 @@ namespace ServiceRequestsApp
             dataGridViewRequests.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewRequests.MultiSelect = false;
             dataGridViewRequests.RowHeadersVisible = false;
+            dataGridViewRequests.ReadOnly = true;
+            dataGridViewRequests.AllowUserToAddRows = false;
+
             dataGridViewRequests.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dataGridViewRequests.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             dataGridViewRequests.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
@@ -57,12 +61,16 @@ namespace ServiceRequestsApp
             dataGridViewRequests.DefaultCellStyle.SelectionBackColor = Color.FromArgb(220, 235, 255);
             dataGridViewRequests.DefaultCellStyle.SelectionForeColor = Color.FromArgb(33, 42, 55);
             dataGridViewRequests.EnableHeadersVisualStyles = false;
+
             dataGridViewRequests.CellFormatting -= DataGridViewRequests_CellFormatting;
             dataGridViewRequests.CellFormatting += DataGridViewRequests_CellFormatting;
         }
 
         private void DataGridViewRequests_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                return;
+
             if (dataGridViewRequests.Columns[e.ColumnIndex].Name != "Status" || e.Value == null)
                 return;
 
@@ -90,18 +98,15 @@ namespace ServiceRequestsApp
             {
                 DataTable table = new DataTable();
                 adapter.Fill(table);
-
                 BindRequestsTable(table);
             }
         }
-
-
 
         private void BindRequestsTable(DataTable table)
         {
             foreach (DataRow row in table.Rows)
             {
-                var raw = row["DateCreated"]?.ToString();
+                string raw = row["DateCreated"]?.ToString();
                 if (DateTime.TryParseExact(raw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsed))
                 {
                     row["DateCreated"] = parsed.ToString("HH:mm");
@@ -109,8 +114,6 @@ namespace ServiceRequestsApp
             }
 
             dataGridViewRequests.DataSource = table;
-            dataGridViewRequests.ReadOnly = true;
-            dataGridViewRequests.AllowUserToAddRows = false;
 
             dataGridViewRequests.Columns["Id"].HeaderText = "№";
             dataGridViewRequests.Columns["Department"].HeaderText = "Отделение";
@@ -142,12 +145,9 @@ namespace ServiceRequestsApp
             foreach (DataRow row in table.Rows)
             {
                 string status = row["Status"]?.ToString();
-                if (status == "Новая")
-                    newCount++;
-                else if (status == "В работе")
-                    inWorkCount++;
-                else if (status == "Выполнена")
-                    doneCount++;
+                if (status == "Новая") newCount++;
+                else if (status == "В работе") inWorkCount++;
+                else if (status == "Выполнена") doneCount++;
             }
 
             lblStatNew.Text = $"Новые: {newCount}";
@@ -155,13 +155,10 @@ namespace ServiceRequestsApp
             lblStatDone.Text = $"Выполнено: {doneCount}";
         }
 
-
         private void dataGridViewRequests_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)
-            {
                 ShowRequestDetails();
-            }
         }
 
         private void ShowRequestDetails()
@@ -172,7 +169,7 @@ namespace ServiceRequestsApp
                 return;
             }
 
-            var row = dataGridViewRequests.CurrentRow;
+            DataGridViewRow row = dataGridViewRequests.CurrentRow;
             string details =
                 $"№: {row.Cells["Id"].Value}\n" +
                 $"ФИО: {row.Cells["FullName"].Value}\n" +
@@ -208,14 +205,11 @@ namespace ServiceRequestsApp
             }
 
             int id = Convert.ToInt32(dataGridViewRequests.CurrentRow.Cells["Id"].Value);
-            string currentDescription = dataGridViewRequests.CurrentRow.Cells["Description"].Value?.ToString() ?? "";
-
+            string currentDescription = dataGridViewRequests.CurrentRow.Cells["Description"].Value?.ToString() ?? string.Empty;
             string newDescription = PromptForDescription(currentDescription);
 
             if (string.IsNullOrWhiteSpace(newDescription))
-            {
                 return;
-            }
 
             using (var connection = new SQLiteConnection(connectionString))
             {
@@ -225,6 +219,37 @@ namespace ServiceRequestsApp
                 cmd.Parameters.AddWithValue("@Description", newDescription.Trim());
                 cmd.Parameters.AddWithValue("@Id", id);
                 cmd.ExecuteNonQuery();
+            }
+
+            LoadRequests();
+            MessageBox.Show("Описание заявки обновлено");
+        }
+
+        private string PromptForDescription(string currentDescription)
+        {
+            using (Form prompt = new Form())
+            {
+                prompt.Width = 560;
+                prompt.Height = 230;
+                prompt.FormBorderStyle = FormBorderStyle.FixedDialog;
+                prompt.Text = "Редактирование заявки";
+                prompt.StartPosition = FormStartPosition.CenterParent;
+                prompt.MaximizeBox = false;
+                prompt.MinimizeBox = false;
+
+                Label textLabel = new Label { Left = 15, Top = 15, Width = 510, Text = "Измените описание заявки:" };
+                TextBox inputBox = new TextBox { Left = 15, Top = 45, Width = 510, Height = 60, Multiline = true, Text = currentDescription };
+                Button confirmation = new Button { Text = "Сохранить", Left = 335, Width = 90, Top = 120, DialogResult = DialogResult.OK };
+                Button cancel = new Button { Text = "Отмена", Left = 435, Width = 90, Top = 120, DialogResult = DialogResult.Cancel };
+
+                prompt.Controls.Add(textLabel);
+                prompt.Controls.Add(inputBox);
+                prompt.Controls.Add(confirmation);
+                prompt.Controls.Add(cancel);
+                prompt.AcceptButton = confirmation;
+                prompt.CancelButton = cancel;
+
+                return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : string.Empty;
             }
 
             LoadRequests();
@@ -470,6 +495,7 @@ namespace ServiceRequestsApp
             form.ShowDialog();
             LoadRequests();
         }
+
         private void SearchRequests(string searchText)
         {
             using (var adapter = new SQLiteDataAdapter(
@@ -482,6 +508,7 @@ namespace ServiceRequestsApp
                 BindRequestsTable(table);
             }
         }
+
         private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
             if (currentRole != "Специалист IT")
@@ -516,20 +543,24 @@ namespace ServiceRequestsApp
             LoadRequests();
             MessageBox.Show("Статус заявки изменён");
         }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
             login.Show();
-            this.Hide();
+            Hide();
         }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SearchRequests(txtSearch.Text); 
+            SearchRequests(txtSearch.Text);
         }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
+
         private void btnReport_Click(object sender, EventArgs e)
         {
             using (var connection = new SQLiteConnection(connectionString))
@@ -566,12 +597,15 @@ WHERE DateCreated >= @FromDate AND DateCreated <= @ToDate";
                 }
             }
         }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
         }
+
         private void MainForm_Load(object sender, EventArgs e)
         {
         }
+
         private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
