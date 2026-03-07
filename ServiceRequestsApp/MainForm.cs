@@ -95,32 +95,46 @@ namespace ServiceRequestsApp
             {
                 DataTable table = new DataTable();
                 adapter.Fill(table);
-
-                foreach (DataRow row in table.Rows)
-                {
-                    string raw = row["DateCreated"]?.ToString();
-                    if (DateTime.TryParseExact(raw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsed))
-                    {
-                        row["DateCreated"] = parsed.ToString("HH:mm");
-                    }
-                }
-
-                dataGridViewRequests.DataSource = table;
-
-                dataGridViewRequests.Columns["Id"].HeaderText = "№";
-                dataGridViewRequests.Columns["Department"].HeaderText = "Отделение";
-                dataGridViewRequests.Columns["ProblemType"].HeaderText = "Оборудование";
-                dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
-                dataGridViewRequests.Columns["DateCreated"].HeaderText = "Время";
-
-                dataGridViewRequests.Columns["FullName"].Visible = false;
-                dataGridViewRequests.Columns["Contact"].Visible = false;
-                dataGridViewRequests.Columns["Description"].Visible = false;
-                dataGridViewRequests.Columns["Priority"].Visible = false;
-                dataGridViewRequests.Columns["Specialist"].Visible = false;
-
-                UpdateCards(table);
+                BindTable(table);
             }
+        }
+
+        private void BindTable(DataTable table)
+        {
+            foreach (DataRow row in table.Rows)
+            {
+                string raw = row["DateCreated"]?.ToString();
+                if (DateTime.TryParseExact(raw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsed))
+                {
+                    row["DateCreated"] = parsed.ToString("dd.MM.yyyy HH:mm");
+                }
+            }
+
+            dataGridViewRequests.DataSource = table;
+
+            dataGridViewRequests.Columns["Id"].HeaderText = "№";
+            dataGridViewRequests.Columns["FullName"].HeaderText = "ФИО";
+            dataGridViewRequests.Columns["Department"].HeaderText = "Подразделение";
+            dataGridViewRequests.Columns["Contact"].HeaderText = "Контакты";
+            dataGridViewRequests.Columns["DateCreated"].HeaderText = "Дата и время";
+            dataGridViewRequests.Columns["ProblemType"].HeaderText = "Тип неисправности";
+            dataGridViewRequests.Columns["Description"].HeaderText = "Описание";
+            dataGridViewRequests.Columns["Priority"].HeaderText = "Приоритет";
+            dataGridViewRequests.Columns["Specialist"].HeaderText = "Специалист";
+            dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
+
+            dataGridViewRequests.Columns["Id"].FillWeight = 20;
+            dataGridViewRequests.Columns["FullName"].FillWeight = 45;
+            dataGridViewRequests.Columns["Department"].FillWeight = 45;
+            dataGridViewRequests.Columns["Contact"].FillWeight = 35;
+            dataGridViewRequests.Columns["DateCreated"].FillWeight = 40;
+            dataGridViewRequests.Columns["ProblemType"].FillWeight = 55;
+            dataGridViewRequests.Columns["Description"].FillWeight = 85;
+            dataGridViewRequests.Columns["Priority"].FillWeight = 28;
+            dataGridViewRequests.Columns["Specialist"].FillWeight = 40;
+            dataGridViewRequests.Columns["Status"].FillWeight = 28;
+
+            UpdateCards(table);
         }
 
         private void UpdateCards(DataTable table)
@@ -158,9 +172,7 @@ namespace ServiceRequestsApp
                 adapter.SelectCommand.Parameters.AddWithValue("@text", "%" + searchText + "%");
                 DataTable table = new DataTable();
                 adapter.Fill(table);
-
-                dataGridViewRequests.DataSource = table;
-                UpdateCards(table);
+                BindTable(table);
             }
         }
 
