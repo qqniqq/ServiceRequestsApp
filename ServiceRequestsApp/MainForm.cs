@@ -99,7 +99,7 @@ namespace ServiceRequestsApp
                 var raw = row["DateCreated"]?.ToString();
                 if (DateTime.TryParseExact(raw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsed))
                 {
-                    row["DateCreated"] = parsed.ToString("HH:mm");
+                    row["DateCreated"] = parsed.ToString("MM.dd.yyyy HH:mm:ss");
                 }
             }
 
@@ -109,21 +109,26 @@ namespace ServiceRequestsApp
 
             dataGridViewRequests.Columns["Id"].HeaderText = "№";
             dataGridViewRequests.Columns["Department"].HeaderText = "Отделение";
-            dataGridViewRequests.Columns["ProblemType"].HeaderText = "Оборудование";
+            dataGridViewRequests.Columns["ProblemType"].HeaderText = "Тип неисправности";
             dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
             dataGridViewRequests.Columns["DateCreated"].HeaderText = "Время";
 
-            dataGridViewRequests.Columns["FullName"].Visible = false;
-            dataGridViewRequests.Columns["Contact"].Visible = false;
-            dataGridViewRequests.Columns["Description"].Visible = false;
-            dataGridViewRequests.Columns["Priority"].Visible = false;
-            dataGridViewRequests.Columns["Specialist"].Visible = false;
+            dataGridViewRequests.Columns["FullName"].HeaderText = "ФИО";
+            dataGridViewRequests.Columns["Contact"].HeaderText = "Способ связи";
+            dataGridViewRequests.Columns["Description"].HeaderText = "Описание";
+            dataGridViewRequests.Columns["Priority"].HeaderText = "Приоритет";
+            dataGridViewRequests.Columns["Specialist"].HeaderText = "Специалист";
 
-            dataGridViewRequests.Columns["Id"].FillWeight = 20;
+            dataGridViewRequests.Columns["Id"].FillWeight = 5;
             dataGridViewRequests.Columns["Department"].FillWeight = 40;
-            dataGridViewRequests.Columns["ProblemType"].FillWeight = 45;
+            dataGridViewRequests.Columns["ProblemType"].FillWeight = 40;
             dataGridViewRequests.Columns["Status"].FillWeight = 30;
             dataGridViewRequests.Columns["DateCreated"].FillWeight = 25;
+            dataGridViewRequests.Columns["FullName"].FillWeight = 25;
+            dataGridViewRequests.Columns["Contact"].FillWeight = 20;
+            dataGridViewRequests.Columns["Description"].FillWeight = 25;
+            dataGridViewRequests.Columns["Priority"].FillWeight = 15;
+            dataGridViewRequests.Columns["Specialist"].FillWeight = 25;
 
             UpdateStatCards(table);
         }
