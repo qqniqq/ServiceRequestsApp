@@ -21,7 +21,7 @@ namespace ServiceRequestsApp
             currentUser = fullName;
             currentRole = role;
 
-            lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
+            lblUser.Text = $"{currentUser} ({currentRole})";
 
             ApplyRolePermissions();
             ConfigureTableAppearance();

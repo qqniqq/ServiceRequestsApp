@@ -84,7 +84,7 @@
             this.labelMenuUsers.ForeColor = System.Drawing.Color.White;
             this.labelMenuUsers.Location = new System.Drawing.Point(22, 319);
             this.labelMenuUsers.Name = "labelMenuUsers";
-            this.labelMenuUsers.Size = new System.Drawing.Size(112, 23);
+            this.labelMenuUsers.Size = new System.Drawing.Size(120, 19);
             this.labelMenuUsers.TabIndex = 6;
             this.labelMenuUsers.Text = "👥 Пользователи";
             // 
@@ -95,7 +95,7 @@
             this.labelMenuReports.ForeColor = System.Drawing.Color.White;
             this.labelMenuReports.Location = new System.Drawing.Point(22, 279);
             this.labelMenuReports.Name = "labelMenuReports";
-            this.labelMenuReports.Size = new System.Drawing.Size(79, 23);
+            this.labelMenuReports.Size = new System.Drawing.Size(80, 19);
             this.labelMenuReports.TabIndex = 5;
             this.labelMenuReports.Text = "🕒 Отчёты";
             // 
@@ -106,7 +106,7 @@
             this.labelMenuDepartments.ForeColor = System.Drawing.Color.White;
             this.labelMenuDepartments.Location = new System.Drawing.Point(22, 239);
             this.labelMenuDepartments.Name = "labelMenuDepartments";
-            this.labelMenuDepartments.Size = new System.Drawing.Size(116, 23);
+            this.labelMenuDepartments.Size = new System.Drawing.Size(98, 19);
             this.labelMenuDepartments.TabIndex = 4;
             this.labelMenuDepartments.Text = "📄 Отделения";
             // 
@@ -117,7 +117,7 @@
             this.labelMenuEquipment.ForeColor = System.Drawing.Color.White;
             this.labelMenuEquipment.Location = new System.Drawing.Point(22, 199);
             this.labelMenuEquipment.Name = "labelMenuEquipment";
-            this.labelMenuEquipment.Size = new System.Drawing.Size(134, 23);
+            this.labelMenuEquipment.Size = new System.Drawing.Size(127, 19);
             this.labelMenuEquipment.TabIndex = 3;
             this.labelMenuEquipment.Text = "🖥 Оборудование";
             // 
@@ -128,7 +128,7 @@
             this.labelMenuRequests.ForeColor = System.Drawing.Color.White;
             this.labelMenuRequests.Location = new System.Drawing.Point(22, 159);
             this.labelMenuRequests.Name = "labelMenuRequests";
-            this.labelMenuRequests.Size = new System.Drawing.Size(89, 23);
+            this.labelMenuRequests.Size = new System.Drawing.Size(79, 19);
             this.labelMenuRequests.TabIndex = 2;
             this.labelMenuRequests.Text = "📋 Заявки";
             // 
@@ -139,7 +139,7 @@
             this.labelMenuDashboard.ForeColor = System.Drawing.Color.White;
             this.labelMenuDashboard.Location = new System.Drawing.Point(22, 119);
             this.labelMenuDashboard.Name = "labelMenuDashboard";
-            this.labelMenuDashboard.Size = new System.Drawing.Size(84, 23);
+            this.labelMenuDashboard.Size = new System.Drawing.Size(78, 19);
             this.labelMenuDashboard.TabIndex = 1;
             this.labelMenuDashboard.Text = "✅ Панель";
             // 
@@ -150,7 +150,7 @@
             this.labelAppTitle.ForeColor = System.Drawing.Color.White;
             this.labelAppTitle.Location = new System.Drawing.Point(22, 33);
             this.labelAppTitle.Name = "labelAppTitle";
-            this.labelAppTitle.Size = new System.Drawing.Size(126, 28);
+            this.labelAppTitle.Size = new System.Drawing.Size(101, 21);
             this.labelAppTitle.TabIndex = 0;
             this.labelAppTitle.Text = "IT HelpDesk";
             // 
@@ -162,7 +162,7 @@
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(184, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1401, 73);
+            this.panelHeader.Size = new System.Drawing.Size(1461, 73);
             this.panelHeader.TabIndex = 1;
             // 
             // lblUser
@@ -171,9 +171,9 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
-            this.lblUser.Location = new System.Drawing.Point(1104, 27);
+            this.lblUser.Location = new System.Drawing.Point(1164, 27);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(57, 20);
+            this.lblUser.Size = new System.Drawing.Size(43, 15);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "lblUser";
             // 
@@ -184,7 +184,7 @@
             this.labelPageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(73)))));
             this.labelPageTitle.Location = new System.Drawing.Point(18, 19);
             this.labelPageTitle.Name = "labelPageTitle";
-            this.labelPageTitle.Size = new System.Drawing.Size(113, 37);
+            this.labelPageTitle.Size = new System.Drawing.Size(89, 30);
             this.labelPageTitle.TabIndex = 0;
             this.labelPageTitle.Text = "Заявки";
             // 
@@ -204,7 +204,7 @@
             this.lblStatNew.ForeColor = System.Drawing.Color.White;
             this.lblStatNew.Location = new System.Drawing.Point(18, 16);
             this.lblStatNew.Name = "lblStatNew";
-            this.lblStatNew.Size = new System.Drawing.Size(105, 28);
+            this.lblStatNew.Size = new System.Drawing.Size(80, 21);
             this.lblStatNew.TabIndex = 0;
             this.lblStatNew.Text = "Новые: 0";
             // 
@@ -224,7 +224,7 @@
             this.lblStatInWork.ForeColor = System.Drawing.Color.White;
             this.lblStatInWork.Location = new System.Drawing.Point(18, 16);
             this.lblStatInWork.Name = "lblStatInWork";
-            this.lblStatInWork.Size = new System.Drawing.Size(132, 28);
+            this.lblStatInWork.Size = new System.Drawing.Size(96, 21);
             this.lblStatInWork.TabIndex = 0;
             this.lblStatInWork.Text = "В работе: 0";
             // 
@@ -244,7 +244,7 @@
             this.lblStatDone.ForeColor = System.Drawing.Color.White;
             this.lblStatDone.Location = new System.Drawing.Point(18, 16);
             this.lblStatDone.Name = "lblStatDone";
-            this.lblStatDone.Size = new System.Drawing.Size(142, 28);
+            this.lblStatDone.Size = new System.Drawing.Size(119, 21);
             this.lblStatDone.TabIndex = 0;
             this.lblStatDone.Text = "Выполнено: 0";
             // 
@@ -255,7 +255,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtSearch.Location = new System.Drawing.Point(206, 171);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(636, 30);
+            this.txtSearch.Size = new System.Drawing.Size(636, 25);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -288,7 +288,7 @@
             this.dataGridViewRequests.ReadOnly = true;
             this.dataGridViewRequests.RowHeadersWidth = 51;
             this.dataGridViewRequests.RowTemplate.Height = 24;
-            this.dataGridViewRequests.Size = new System.Drawing.Size(1363, 584);
+            this.dataGridViewRequests.Size = new System.Drawing.Size(1423, 584);
             this.dataGridViewRequests.TabIndex = 7;
             // 
             // label1
@@ -298,7 +298,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(132)))), ((int)(((byte)(147)))));
             this.label1.Location = new System.Drawing.Point(202, 151);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 21);
+            this.label1.Size = new System.Drawing.Size(89, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Поиск заявок";
             // 
@@ -312,7 +312,7 @@
             "Выполнена"});
             this.comboStatus.Location = new System.Drawing.Point(1060, 171);
             this.comboStatus.Name = "comboStatus";
-            this.comboStatus.Size = new System.Drawing.Size(156, 31);
+            this.comboStatus.Size = new System.Drawing.Size(156, 27);
             this.comboStatus.TabIndex = 9;
             // 
             // btnUpdateStatus
@@ -351,7 +351,7 @@
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(327, 815);
+            this.btnLogout.Location = new System.Drawing.Point(1390, 90);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(239, 37);
             this.btnLogout.TabIndex = 12;
@@ -364,7 +364,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(244)))), ((int)(((byte)(248)))));
-            this.ClientSize = new System.Drawing.Size(1585, 877);
+            this.ClientSize = new System.Drawing.Size(1645, 877);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.btnUpdateStatus);
