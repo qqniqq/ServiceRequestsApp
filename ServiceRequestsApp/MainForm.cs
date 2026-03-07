@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace ServiceRequestsApp
 {
@@ -250,6 +251,242 @@ namespace ServiceRequestsApp
 
                 return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : string.Empty;
             }
+
+            LoadRequests();
+            MessageBox.Show("Описание заявки обновлено");
+        }
+
+
+        private string PromptForDescription(string currentDescription)
+        {
+            Form prompt = new Form
+            {
+                Width = 560,
+                Height = 230,
+                FormBorderStyle = FormBorderStyle.FixedDialog,
+                Text = "Редактирование заявки",
+                StartPosition = FormStartPosition.CenterParent,
+                MaximizeBox = false,
+                MinimizeBox = false
+            };
+
+            Label textLabel = new Label { Left = 15, Top = 15, Width = 510, Text = "Измените описание заявки:" };
+            TextBox inputBox = new TextBox { Left = 15, Top = 45, Width = 510, Height = 60, Multiline = true, Text = currentDescription };
+            Button confirmation = new Button { Text = "Сохранить", Left = 335, Width = 90, Top = 120, DialogResult = DialogResult.OK };
+            Button cancel = new Button { Text = "Отмена", Left = 435, Width = 90, Top = 120, DialogResult = DialogResult.Cancel };
+
+            prompt.Controls.Add(textLabel);
+            prompt.Controls.Add(inputBox);
+            prompt.Controls.Add(confirmation);
+            prompt.Controls.Add(cancel);
+            prompt.AcceptButton = confirmation;
+            prompt.CancelButton = cancel;
+
+            return prompt.ShowDialog() == DialogResult.OK ? inputBox.Text : string.Empty;
+        }
+
+
+
+        private void BindRequestsTable(DataTable table)
+        {
+            foreach (DataRow row in table.Rows)
+            {
+                var raw = row["DateCreated"]?.ToString();
+                if (DateTime.TryParseExact(raw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsed))
+                {
+                    row["DateCreated"] = parsed.ToString("HH:mm");
+                }
+            }
+
+            dataGridViewRequests.DataSource = table;
+            dataGridViewRequests.ReadOnly = true;
+            dataGridViewRequests.AllowUserToAddRows = false;
+
+            dataGridViewRequests.Columns["Id"].HeaderText = "№";
+            dataGridViewRequests.Columns["Department"].HeaderText = "Отделение";
+            dataGridViewRequests.Columns["ProblemType"].HeaderText = "Оборудование";
+            dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
+            dataGridViewRequests.Columns["DateCreated"].HeaderText = "Время";
+
+            dataGridViewRequests.Columns["FullName"].Visible = false;
+            dataGridViewRequests.Columns["Contact"].Visible = false;
+            dataGridViewRequests.Columns["Description"].Visible = false;
+            dataGridViewRequests.Columns["Priority"].Visible = false;
+            dataGridViewRequests.Columns["Specialist"].Visible = false;
+
+            dataGridViewRequests.Columns["Id"].FillWeight = 20;
+            dataGridViewRequests.Columns["Department"].FillWeight = 40;
+            dataGridViewRequests.Columns["ProblemType"].FillWeight = 45;
+            dataGridViewRequests.Columns["Status"].FillWeight = 30;
+            dataGridViewRequests.Columns["DateCreated"].FillWeight = 25;
+
+            UpdateStatCards(table);
+        }
+
+        private void UpdateStatCards(DataTable table)
+        {
+            int newCount = 0;
+            int inWorkCount = 0;
+            int doneCount = 0;
+
+            foreach (DataRow row in table.Rows)
+            {
+                string status = row["Status"]?.ToString();
+                if (status == "Новая")
+                    newCount++;
+                else if (status == "В работе")
+                    inWorkCount++;
+                else if (status == "Выполнена")
+                    doneCount++;
+            }
+
+            lblStatNew.Text = $"Новые: {newCount}";
+            lblStatInWork.Text = $"В работе: {inWorkCount}";
+            lblStatDone.Text = $"Выполнено: {doneCount}";
+        }
+
+
+        private void dataGridViewRequests_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                ShowRequestDetails();
+            }
+        }
+
+        private void ShowRequestDetails()
+        {
+            if (dataGridViewRequests.CurrentRow == null)
+            {
+                MessageBox.Show("Сначала выберите заявку");
+                return;
+            }
+
+            var row = dataGridViewRequests.CurrentRow;
+            string details =
+                $"№: {row.Cells["Id"].Value}\n" +
+                $"ФИО: {row.Cells["FullName"].Value}\n" +
+                $"Подразделение: {row.Cells["Department"].Value}\n" +
+                $"Контакт: {row.Cells["Contact"].Value}\n" +
+                $"Дата: {row.Cells["DateCreated"].Value}\n" +
+                $"Тип: {row.Cells["ProblemType"].Value}\n" +
+                $"Описание: {row.Cells["Description"].Value}\n" +
+                $"Приоритет: {row.Cells["Priority"].Value}\n" +
+                $"Специалист: {row.Cells["Specialist"].Value}\n" +
+                $"Статус: {row.Cells["Status"].Value}";
+
+            MessageBox.Show(details, "Детали заявки", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            ShowRequestDetails();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для редактирования заявки");
+                return;
+            }
+
+            if (dataGridViewRequests.CurrentRow == null)
+            {
+                MessageBox.Show("Выберите заявку для редактирования");
+                return;
+            }
+
+            int id = Convert.ToInt32(dataGridViewRequests.CurrentRow.Cells["Id"].Value);
+            string currentDescription = dataGridViewRequests.CurrentRow.Cells["Description"].Value?.ToString() ?? "";
+
+            string newDescription = Interaction.InputBox(
+                "Измените описание заявки:",
+                "Редактирование заявки",
+                currentDescription);
+
+            if (string.IsNullOrWhiteSpace(newDescription))
+            {
+                return;
+            }
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "UPDATE Requests SET Description = @Description WHERE Id = @Id";
+                SQLiteCommand cmd = new SQLiteCommand(sql, connection);
+                cmd.Parameters.AddWithValue("@Description", newDescription.Trim());
+                cmd.Parameters.AddWithValue("@Id", id);
+                cmd.ExecuteNonQuery();
+            }
+
+            LoadRequests();
+            MessageBox.Show("Описание заявки обновлено");
+        }
+
+
+
+        private void BindRequestsTable(DataTable table)
+        {
+            foreach (DataRow row in table.Rows)
+            {
+                var raw = row["DateCreated"]?.ToString();
+                if (DateTime.TryParseExact(raw, "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsed))
+                {
+                    row["DateCreated"] = parsed.ToString("MM.dd.yyyy HH:mm:ss");
+                }
+            }
+
+            dataGridViewRequests.DataSource = table;
+            dataGridViewRequests.ReadOnly = true;
+            dataGridViewRequests.AllowUserToAddRows = false;
+
+            dataGridViewRequests.Columns["Id"].HeaderText = "№";
+            dataGridViewRequests.Columns["Department"].HeaderText = "Отделение";
+            dataGridViewRequests.Columns["ProblemType"].HeaderText = "Тип неисправности";
+            dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
+            dataGridViewRequests.Columns["DateCreated"].HeaderText = "Время";
+
+            dataGridViewRequests.Columns["FullName"].HeaderText = "ФИО";
+            dataGridViewRequests.Columns["Contact"].HeaderText = "Способ связи";
+            dataGridViewRequests.Columns["Description"].HeaderText = "Описание";
+            dataGridViewRequests.Columns["Priority"].HeaderText = "Приоритет";
+            dataGridViewRequests.Columns["Specialist"].HeaderText = "Специалист";
+
+            dataGridViewRequests.Columns["Id"].FillWeight = 5;
+            dataGridViewRequests.Columns["Department"].FillWeight = 40;
+            dataGridViewRequests.Columns["ProblemType"].FillWeight = 40;
+            dataGridViewRequests.Columns["Status"].FillWeight = 30;
+            dataGridViewRequests.Columns["DateCreated"].FillWeight = 25;
+            dataGridViewRequests.Columns["FullName"].FillWeight = 25;
+            dataGridViewRequests.Columns["Contact"].FillWeight = 20;
+            dataGridViewRequests.Columns["Description"].FillWeight = 25;
+            dataGridViewRequests.Columns["Priority"].FillWeight = 15;
+            dataGridViewRequests.Columns["Specialist"].FillWeight = 25;
+
+            UpdateStatCards(table);
+        }
+
+        private void UpdateStatCards(DataTable table)
+        {
+            int newCount = 0;
+            int inWorkCount = 0;
+            int doneCount = 0;
+
+            foreach (DataRow row in table.Rows)
+            {
+                string status = row["Status"]?.ToString();
+                if (status == "Новая")
+                    newCount++;
+                else if (status == "В работе")
+                    inWorkCount++;
+                else if (status == "Выполнена")
+                    doneCount++;
+            }
+
+            lblStatNew.Text = $"Новые: {newCount}";
+            lblStatInWork.Text = $"В работе: {inWorkCount}";
+            lblStatDone.Text = $"Выполнено: {doneCount}";
         }
 
         private void btnAddRequest_Click(object sender, EventArgs e)
