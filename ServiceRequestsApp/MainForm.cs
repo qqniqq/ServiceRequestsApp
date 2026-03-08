@@ -4,6 +4,7 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace ServiceRequestsApp
 {
@@ -194,6 +195,12 @@ namespace ServiceRequestsApp
 
         private int? GetSelectedRequestId()
         {
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для изменения статуса заявки");
+                return;
+            }
+
             if (dataGridViewRequests.CurrentRow == null)
                 return null;
 

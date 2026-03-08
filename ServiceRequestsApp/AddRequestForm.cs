@@ -73,12 +73,7 @@ namespace ServiceRequestsApp
                 txtDescription.Focus();
                 return;
             }
-            if (txtDescription.Text.Trim().Length < 10)
-            {
-                MessageBox.Show("Описание проблемы должно быть не менее 10 символов");
-                txtDescription.Focus();
-                return;
-            }
+
             if (comboPriority.SelectedIndex == -1)
             {
                 MessageBox.Show("Выберите приоритет заявки");
