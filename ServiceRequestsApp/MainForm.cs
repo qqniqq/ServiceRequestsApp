@@ -23,6 +23,13 @@ namespace ServiceRequestsApp
             currentRole = role;
             lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
 
+            // В боковом меню оставляем только реально работающий раздел, чтобы не путать пользователя.
+            labelMenuDashboard.Visible = false;
+            labelMenuEquipment.Visible = false;
+            labelMenuDepartments.Visible = false;
+            labelMenuReports.Visible = false;
+            labelMenuUsers.Visible = false;
+
             dateFrom.Value = DateTime.Today.AddDays(-7);
             dateTo.Value = DateTime.Today;
 
@@ -33,14 +40,16 @@ namespace ServiceRequestsApp
 
         private void ApplyRolePermissions()
         {
-            if (currentRole != "Специалист IT")
-            {
-                comboStatus.Visible = false;
-                btnUpdateStatus.Visible = false;
-                btnReport.Visible = false;
-                btnEdit.Visible = false;
-                btnDetails.Visible = false;
-            }
+            bool isItSpecialist = currentRole == "Специалист IT";
+
+            comboStatus.Visible = isItSpecialist;
+            btnUpdateStatus.Visible = isItSpecialist;
+            btnReport.Visible = isItSpecialist;
+            btnEdit.Visible = isItSpecialist;
+            btnDelete.Visible = isItSpecialist;
+
+            // Детали полезны всем ролям.
+            btnDetails.Visible = true;
         }
 
         private void ConfigureTable()
@@ -51,7 +60,10 @@ namespace ServiceRequestsApp
             dataGridViewRequests.RowHeadersVisible = false;
             dataGridViewRequests.ReadOnly = true;
             dataGridViewRequests.AllowUserToAddRows = false;
-            dataGridViewRequests.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dataGridViewRequests.AllowUserToDeleteRows = false;
+            dataGridViewRequests.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.None;
+            dataGridViewRequests.RowTemplate.Height = 30;
+            dataGridViewRequests.DefaultCellStyle.WrapMode = DataGridViewTriState.False;
 
             dataGridViewRequests.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             dataGridViewRequests.DefaultCellStyle.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular);
@@ -123,16 +135,17 @@ namespace ServiceRequestsApp
             dataGridViewRequests.Columns["Specialist"].HeaderText = "Специалист";
             dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
 
-            dataGridViewRequests.Columns["Id"].FillWeight = 20;
-            dataGridViewRequests.Columns["FullName"].FillWeight = 45;
-            dataGridViewRequests.Columns["Department"].FillWeight = 45;
-            dataGridViewRequests.Columns["Contact"].FillWeight = 35;
-            dataGridViewRequests.Columns["DateCreated"].FillWeight = 40;
-            dataGridViewRequests.Columns["ProblemType"].FillWeight = 55;
-            dataGridViewRequests.Columns["Description"].FillWeight = 85;
-            dataGridViewRequests.Columns["Priority"].FillWeight = 28;
-            dataGridViewRequests.Columns["Specialist"].FillWeight = 40;
-            dataGridViewRequests.Columns["Status"].FillWeight = 28;
+            // Веса подобраны так, чтобы все колонки помещались на экране без скрытия данных.
+            dataGridViewRequests.Columns["Id"].FillWeight = 6;
+            dataGridViewRequests.Columns["FullName"].FillWeight = 14;
+            dataGridViewRequests.Columns["Department"].FillWeight = 12;
+            dataGridViewRequests.Columns["Contact"].FillWeight = 10;
+            dataGridViewRequests.Columns["DateCreated"].FillWeight = 11;
+            dataGridViewRequests.Columns["ProblemType"].FillWeight = 10;
+            dataGridViewRequests.Columns["Description"].FillWeight = 20;
+            dataGridViewRequests.Columns["Priority"].FillWeight = 7;
+            dataGridViewRequests.Columns["Specialist"].FillWeight = 10;
+            dataGridViewRequests.Columns["Status"].FillWeight = 10;
 
             UpdateCards(table);
         }
@@ -158,15 +171,19 @@ namespace ServiceRequestsApp
 
         private void btnAddRequest_Click(object sender, EventArgs e)
         {
-            AddRequestForm form = new AddRequestForm();
-            form.ShowDialog();
+            using (AddRequestForm form = new AddRequestForm())
+            {
+                form.ShowDialog();
+            }
+
+            // После закрытия формы перечитываем данные из БД.
             LoadRequests();
         }
 
         private void SearchRequests(string searchText)
         {
             using (var adapter = new SQLiteDataAdapter(
-                "SELECT * FROM Requests WHERE FullName LIKE @text OR Department LIKE @text OR ProblemType LIKE @text ORDER BY Id DESC",
+                "SELECT * FROM Requests WHERE FullName LIKE @text OR Department LIKE @text OR ProblemType LIKE @text OR Description LIKE @text ORDER BY Id DESC",
                 connectionString))
             {
                 adapter.SelectCommand.Parameters.AddWithValue("@text", "%" + searchText + "%");
@@ -174,6 +191,24 @@ namespace ServiceRequestsApp
                 adapter.Fill(table);
                 BindTable(table);
             }
+        }
+
+        private int? GetSelectedRequestId()
+        {
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для изменения статуса заявки");
+                return;
+            }
+
+            if (dataGridViewRequests.CurrentRow == null)
+                return null;
+
+            object idValue = dataGridViewRequests.CurrentRow.Cells["Id"].Value;
+            if (idValue == null)
+                return null;
+
+            return Convert.ToInt32(idValue);
         }
 
         private void btnUpdateStatus_Click(object sender, EventArgs e)
@@ -184,7 +219,8 @@ namespace ServiceRequestsApp
                 return;
             }
 
-            if (dataGridViewRequests.CurrentRow == null)
+            int? selectedId = GetSelectedRequestId();
+            if (!selectedId.HasValue)
             {
                 MessageBox.Show("Выберите заявку для изменения статуса");
                 return;
@@ -196,19 +232,178 @@ namespace ServiceRequestsApp
                 return;
             }
 
-            int id = Convert.ToInt32(dataGridViewRequests.CurrentRow.Cells["Id"].Value);
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
                 string sql = "UPDATE Requests SET Status = @Status WHERE Id = @Id";
                 SQLiteCommand cmd = new SQLiteCommand(sql, connection);
                 cmd.Parameters.AddWithValue("@Status", comboStatus.Text);
-                cmd.Parameters.AddWithValue("@Id", id);
+                cmd.Parameters.AddWithValue("@Id", selectedId.Value);
                 cmd.ExecuteNonQuery();
             }
 
             LoadRequests();
             MessageBox.Show("Статус заявки изменён");
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для удаления заявки");
+                return;
+            }
+
+            int? selectedId = GetSelectedRequestId();
+            if (!selectedId.HasValue)
+            {
+                MessageBox.Show("Выберите заявку для удаления");
+                return;
+            }
+
+            DialogResult confirm = MessageBox.Show(
+                $"Удалить заявку №{selectedId.Value}?",
+                "Подтверждение удаления",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning);
+
+            if (confirm != DialogResult.Yes)
+                return;
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                SQLiteCommand cmd = new SQLiteCommand("DELETE FROM Requests WHERE Id = @Id", connection);
+                cmd.Parameters.AddWithValue("@Id", selectedId.Value);
+                cmd.ExecuteNonQuery();
+            }
+
+            LoadRequests();
+            MessageBox.Show("Заявка удалена");
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            if (currentRole != "Специалист IT")
+            {
+                MessageBox.Show("Недостаточно прав для редактирования заявки");
+                return;
+            }
+
+            int? selectedId = GetSelectedRequestId();
+            if (!selectedId.HasValue)
+            {
+                MessageBox.Show("Выберите заявку для правки");
+                return;
+            }
+
+            string currentDescription = dataGridViewRequests.CurrentRow.Cells["Description"].Value?.ToString() ?? string.Empty;
+            string newDescription = PromptForText("Правка заявки", "Введите новое описание:", currentDescription);
+
+            if (newDescription == null)
+                return;
+
+            if (newDescription.Trim().Length < 10)
+            {
+                MessageBox.Show("Описание должно содержать не менее 10 символов");
+                return;
+            }
+
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                SQLiteCommand cmd = new SQLiteCommand("UPDATE Requests SET Description = @Description WHERE Id = @Id", connection);
+                cmd.Parameters.AddWithValue("@Description", newDescription.Trim());
+                cmd.Parameters.AddWithValue("@Id", selectedId.Value);
+                cmd.ExecuteNonQuery();
+            }
+
+            LoadRequests();
+            MessageBox.Show("Описание заявки обновлено");
+        }
+
+        private void btnDetails_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewRequests.CurrentRow == null)
+            {
+                MessageBox.Show("Выберите заявку для просмотра деталей");
+                return;
+            }
+
+            DataGridViewRow row = dataGridViewRequests.CurrentRow;
+            string details =
+                $"№: {row.Cells["Id"].Value}\n" +
+                $"ФИО: {row.Cells["FullName"].Value}\n" +
+                $"Подразделение: {row.Cells["Department"].Value}\n" +
+                $"Контакты: {row.Cells["Contact"].Value}\n" +
+                $"Дата и время: {row.Cells["DateCreated"].Value}\n" +
+                $"Тип неисправности: {row.Cells["ProblemType"].Value}\n" +
+                $"Описание: {row.Cells["Description"].Value}\n" +
+                $"Приоритет: {row.Cells["Priority"].Value}\n" +
+                $"Специалист: {row.Cells["Specialist"].Value}\n" +
+                $"Статус: {row.Cells["Status"].Value}";
+
+            MessageBox.Show(details, "Детали заявки", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private string PromptForText(string title, string label, string initialValue)
+        {
+            using (Form prompt = new Form())
+            {
+                prompt.Text = title;
+                prompt.Width = 620;
+                prompt.Height = 220;
+                prompt.StartPosition = FormStartPosition.CenterParent;
+                prompt.FormBorderStyle = FormBorderStyle.FixedDialog;
+                prompt.MinimizeBox = false;
+                prompt.MaximizeBox = false;
+
+                Label textLabel = new Label
+                {
+                    Left = 12,
+                    Top = 16,
+                    Width = 580,
+                    Text = label
+                };
+
+                TextBox textBox = new TextBox
+                {
+                    Left = 12,
+                    Top = 46,
+                    Width = 580,
+                    Height = 60,
+                    Multiline = true,
+                    Text = initialValue
+                };
+
+                Button confirmation = new Button
+                {
+                    Text = "Сохранить",
+                    DialogResult = DialogResult.OK,
+                    Left = 392,
+                    Width = 95,
+                    Top = 120
+                };
+
+                Button cancel = new Button
+                {
+                    Text = "Отмена",
+                    DialogResult = DialogResult.Cancel,
+                    Left = 497,
+                    Width = 95,
+                    Top = 120
+                };
+
+                prompt.Controls.Add(textLabel);
+                prompt.Controls.Add(textBox);
+                prompt.Controls.Add(confirmation);
+                prompt.Controls.Add(cancel);
+
+                prompt.AcceptButton = confirmation;
+                prompt.CancelButton = cancel;
+
+                return prompt.ShowDialog(this) == DialogResult.OK ? textBox.Text : null;
+            }
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -266,8 +461,6 @@ WHERE DateCreated >= @FromDate AND DateCreated <= @ToDate";
         }
 
         // intentionally empty handlers kept for designer compatibility
-        private void btnEdit_Click(object sender, EventArgs e) { }
-        private void btnDetails_Click(object sender, EventArgs e) { }
         private void btnSearch_Click(object sender, EventArgs e) { }
         private void MainForm_Load(object sender, EventArgs e) { }
         private void comboStatus_SelectedIndexChanged(object sender, EventArgs e) { }

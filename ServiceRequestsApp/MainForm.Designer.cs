@@ -53,6 +53,7 @@
             this.btnUpdateStatus = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDetails = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.lblDateFrom = new System.Windows.Forms.Label();
             this.dateFrom = new System.Windows.Forms.DateTimePicker();
             this.lblDateTo = new System.Windows.Forms.Label();
@@ -333,9 +334,9 @@
             this.btnUpdateStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
             this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStatus.Location = new System.Drawing.Point(1222, 167);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(1210, 167);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
-            this.btnUpdateStatus.Size = new System.Drawing.Size(165, 36);
+            this.btnUpdateStatus.Size = new System.Drawing.Size(150, 36);
             this.btnUpdateStatus.TabIndex = 10;
             this.btnUpdateStatus.Text = "Изменить статус";
             this.btnUpdateStatus.UseVisualStyleBackColor = false;
@@ -350,9 +351,9 @@
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(136)))), ((int)(((byte)(157)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(1393, 167);
+            this.btnEdit.Location = new System.Drawing.Point(1366, 167);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(84, 36);
+            this.btnEdit.Size = new System.Drawing.Size(78, 36);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Правка";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -367,13 +368,30 @@
             this.btnDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.btnDetails.Location = new System.Drawing.Point(1483, 167);
+            this.btnDetails.Location = new System.Drawing.Point(1450, 167);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(86, 36);
+            this.btnDetails.Size = new System.Drawing.Size(78, 36);
             this.btnDetails.TabIndex = 12;
             this.btnDetails.Text = "Детали";
             this.btnDetails.UseVisualStyleBackColor = false;
             this.btnDetails.Click += new System.EventHandler(this.btnDetails_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
+            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
+            this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(1534, 167);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(35, 36);
+            this.btnDelete.TabIndex = 13;
+            this.btnDelete.Text = "✕";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // lblDateFrom
             // 
@@ -463,6 +481,7 @@
             this.Controls.Add(this.lblDateTo);
             this.Controls.Add(this.dateFrom);
             this.Controls.Add(this.lblDateFrom);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnDetails);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnUpdateStatus);
@@ -527,6 +546,7 @@
         private System.Windows.Forms.Button btnUpdateStatus;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDetails;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label lblDateFrom;
         private System.Windows.Forms.DateTimePicker dateFrom;
         private System.Windows.Forms.Label lblDateTo;

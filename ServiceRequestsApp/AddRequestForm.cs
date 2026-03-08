@@ -10,6 +10,20 @@ namespace ServiceRequestsApp
         public AddRequestForm()
         {
             InitializeComponent();
+
+            comboProblemType.Items.Clear();
+            comboProblemType.Items.AddRange(new object[]
+            {
+                "ПК врача",
+                "Принтер",
+                "МФУ",
+                "Сеть",
+                "Телефония",
+                "Медицинская информационная система",
+                "Программное обеспечение",
+                "Другое"
+            });
+
             comboDepartment.SelectedIndex = -1;
             comboPriority.SelectedIndex = -1;
             comboProblemType.SelectedIndex = -1;
