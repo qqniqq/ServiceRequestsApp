@@ -119,10 +119,10 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtFullName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>264, 13</value>
+    <value>18, 41</value>
   </data>
   <data name="txtFullName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 30</value>
+    <value>240, 30</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtFullName.TabIndex" type="System.Int32, mscorlib">
@@ -141,10 +141,10 @@
     <value>15</value>
   </data>
   <data name="txtContact.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 92</value>
+    <value>18, 161</value>
   </data>
   <data name="txtContact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 30</value>
+    <value>240, 30</value>
   </data>
   <data name="txtContact.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -162,10 +162,10 @@
     <value>14</value>
   </data>
   <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 167</value>
+    <value>18, 293</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 30</value>
+    <value>242, 30</value>
   </data>
   <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -192,10 +192,10 @@
     <value>Высокий</value>
   </data>
   <data name="comboPriority.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 203</value>
+    <value>298, 41</value>
   </data>
   <data name="comboPriority.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 30</value>
+    <value>242, 30</value>
   </data>
   <data name="comboPriority.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -212,11 +212,15 @@
   <data name="&gt;&gt;comboPriority.ZOrder" xml:space="preserve">
     <value>12</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 279</value>
+    <value>298, 207</value>
   </data>
   <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 65</value>
+    <value>242, 55</value>
   </data>
   <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -240,7 +244,7 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 13</value>
+    <value>16, 16</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 22</value>
@@ -267,7 +271,7 @@
     <value>True</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 51</value>
+    <value>16, 74</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
     <value>139, 22</value>
@@ -294,7 +298,7 @@
     <value>True</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 92</value>
+    <value>16, 136</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
     <value>181, 22</value>
@@ -321,7 +325,7 @@
     <value>True</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>71, 136</value>
+    <value>14, 207</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
     <value>178, 22</value>
@@ -348,7 +352,7 @@
     <value>True</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>63, 170</value>
+    <value>16, 268</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
     <value>186, 22</value>
@@ -375,7 +379,7 @@
     <value>True</value>
   </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 206</value>
+    <value>294, 16</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>164, 22</value>
@@ -423,10 +427,10 @@
     <value>IT-отдел</value>
   </data>
   <data name="comboDepartment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 48</value>
+    <value>18, 99</value>
   </data>
   <data name="comboDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 30</value>
+    <value>240, 30</value>
   </data>
   <data name="comboDepartment.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -447,7 +451,7 @@
     <value>True</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 242</value>
+    <value>294, 74</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 22</value>
@@ -492,10 +496,10 @@
     <value>Другое</value>
   </data>
   <data name="comboProblemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>268, 128</value>
+    <value>20, 232</value>
   </data>
   <data name="comboProblemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 30</value>
+    <value>238, 30</value>
   </data>
   <data name="comboProblemType.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -522,10 +526,10 @@
     <value>Сидоров С.С.</value>
   </data>
   <data name="comboSpecialist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>266, 239</value>
+    <value>298, 99</value>
   </data>
   <data name="comboSpecialist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 30</value>
+    <value>242, 30</value>
   </data>
   <data name="comboSpecialist.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -542,11 +546,14 @@
   <data name="&gt;&gt;comboSpecialist.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>295, 341</value>
+    <value>298, 268</value>
   </data>
   <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 65</value>
+    <value>242, 55</value>
   </data>
   <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -572,12 +579,11 @@
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>723, 406</value>
+    <value>565, 404</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>

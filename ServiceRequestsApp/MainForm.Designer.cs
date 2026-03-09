@@ -71,7 +71,6 @@
             // 
             // panelSidebar
             // 
-            resources.ApplyResources(this.panelSidebar, "panelSidebar");
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(21)))), ((int)(((byte)(98)))), ((int)(((byte)(201)))));
             this.panelSidebar.Controls.Add(this.labelMenuUsers);
             this.panelSidebar.Controls.Add(this.labelMenuReports);
@@ -80,6 +79,7 @@
             this.panelSidebar.Controls.Add(this.labelMenuRequests);
             this.panelSidebar.Controls.Add(this.labelMenuDashboard);
             this.panelSidebar.Controls.Add(this.labelAppTitle);
+            resources.ApplyResources(this.panelSidebar, "panelSidebar");
             this.panelSidebar.Name = "panelSidebar";
             // 
             // labelMenuUsers
@@ -126,10 +126,10 @@
             // 
             // panelHeader
             // 
-            resources.ApplyResources(this.panelHeader, "panelHeader");
             this.panelHeader.BackColor = System.Drawing.Color.White;
             this.panelHeader.Controls.Add(this.lblUser);
             this.panelHeader.Controls.Add(this.labelPageTitle);
+            resources.ApplyResources(this.panelHeader, "panelHeader");
             this.panelHeader.Name = "panelHeader";
             // 
             // lblUser
@@ -146,9 +146,9 @@
             // 
             // panelStatNew
             // 
-            resources.ApplyResources(this.panelStatNew, "panelStatNew");
             this.panelStatNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.panelStatNew.Controls.Add(this.lblStatNew);
+            resources.ApplyResources(this.panelStatNew, "panelStatNew");
             this.panelStatNew.Name = "panelStatNew";
             // 
             // lblStatNew
@@ -159,9 +159,9 @@
             // 
             // panelStatInWork
             // 
-            resources.ApplyResources(this.panelStatInWork, "panelStatInWork");
             this.panelStatInWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(137)))), ((int)(((byte)(245)))));
             this.panelStatInWork.Controls.Add(this.lblStatInWork);
+            resources.ApplyResources(this.panelStatInWork, "panelStatInWork");
             this.panelStatInWork.Name = "panelStatInWork";
             // 
             // lblStatInWork
@@ -172,9 +172,9 @@
             // 
             // panelStatDone
             // 
-            resources.ApplyResources(this.panelStatDone, "panelStatDone");
             this.panelStatDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(120)))), ((int)(((byte)(230)))));
             this.panelStatDone.Controls.Add(this.lblStatDone);
+            resources.ApplyResources(this.panelStatDone, "panelStatDone");
             this.panelStatDone.Name = "panelStatDone";
             // 
             // lblStatDone
@@ -185,20 +185,20 @@
             // 
             // txtSearch
             // 
-            resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            resources.ApplyResources(this.txtSearch, "txtSearch");
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnAddRequest
             // 
-            resources.ApplyResources(this.btnAddRequest, "btnAddRequest");
             this.btnAddRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(236)))));
             this.btnAddRequest.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddRequest.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(92)))), ((int)(((byte)(193)))));
             this.btnAddRequest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(97)))), ((int)(((byte)(206)))));
             this.btnAddRequest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
+            resources.ApplyResources(this.btnAddRequest, "btnAddRequest");
             this.btnAddRequest.ForeColor = System.Drawing.Color.White;
             this.btnAddRequest.Name = "btnAddRequest";
             this.btnAddRequest.UseVisualStyleBackColor = false;
@@ -206,13 +206,14 @@
             // 
             // dataGridViewRequests
             // 
-            resources.ApplyResources(this.dataGridViewRequests, "dataGridViewRequests");
             this.dataGridViewRequests.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(229)))), ((int)(((byte)(236)))));
+            resources.ApplyResources(this.dataGridViewRequests, "dataGridViewRequests");
             this.dataGridViewRequests.Name = "dataGridViewRequests";
             this.dataGridViewRequests.ReadOnly = true;
+            this.dataGridViewRequests.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewRequests.RowTemplate.Height = 24;
             // 
             // label1
@@ -223,23 +224,23 @@
             // 
             // comboStatus
             // 
-            resources.ApplyResources(this.comboStatus, "comboStatus");
             this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
             resources.GetString("comboStatus.Items"),
             resources.GetString("comboStatus.Items1"),
             resources.GetString("comboStatus.Items2")});
+            resources.ApplyResources(this.comboStatus, "comboStatus");
             this.comboStatus.Name = "comboStatus";
             // 
             // btnUpdateStatus
             // 
-            resources.ApplyResources(this.btnUpdateStatus, "btnUpdateStatus");
             this.btnUpdateStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(236)))));
             this.btnUpdateStatus.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnUpdateStatus.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(92)))), ((int)(((byte)(193)))));
             this.btnUpdateStatus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(97)))), ((int)(((byte)(206)))));
             this.btnUpdateStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
+            resources.ApplyResources(this.btnUpdateStatus, "btnUpdateStatus");
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
             this.btnUpdateStatus.Name = "btnUpdateStatus";
             this.btnUpdateStatus.UseVisualStyleBackColor = false;
@@ -247,12 +248,12 @@
             // 
             // btnEdit
             // 
-            resources.ApplyResources(this.btnEdit, "btnEdit");
             this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(124)))), ((int)(((byte)(145)))));
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(109)))), ((int)(((byte)(130)))));
             this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(136)))), ((int)(((byte)(157)))));
+            resources.ApplyResources(this.btnEdit, "btnEdit");
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -260,12 +261,12 @@
             // 
             // btnDetails
             // 
-            resources.ApplyResources(this.btnDetails, "btnDetails");
             this.btnDetails.BackColor = System.Drawing.Color.White;
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(193)))), ((int)(((byte)(207)))));
             this.btnDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(246)))));
             this.btnDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
+            resources.ApplyResources(this.btnDetails, "btnDetails");
             this.btnDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
             this.btnDetails.Name = "btnDetails";
             this.btnDetails.UseVisualStyleBackColor = false;
@@ -273,12 +274,12 @@
             // 
             // btnDelete
             // 
-            resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(75)))), ((int)(((byte)(75)))));
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
+            resources.ApplyResources(this.btnDelete, "btnDelete");
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -360,7 +361,6 @@
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelSidebar);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);

@@ -98,6 +98,7 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -156,6 +157,7 @@
             resources.GetString("comboProblemType.Items6")});
             resources.ApplyResources(this.comboProblemType, "comboProblemType");
             this.comboProblemType.Name = "comboProblemType";
+            this.comboProblemType.SelectedIndexChanged += new System.EventHandler(this.comboProblemType_SelectedIndexChanged);
             // 
             // comboSpecialist
             // 
@@ -204,7 +206,6 @@
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtFullName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
             this.Name = "AddRequestForm";
             this.Load += new System.EventHandler(this.AddRequestForm_Load);
             this.ResumeLayout(false);

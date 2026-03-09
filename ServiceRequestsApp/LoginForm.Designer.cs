@@ -39,12 +39,12 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 112);
+            this.label2.Location = new System.Drawing.Point(119, 105);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 23);
+            this.label2.Size = new System.Drawing.Size(69, 23);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Пароль:";
+            this.label2.Text = "Пароль";
             // 
             // btnLogin
             // 
@@ -65,11 +65,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 63);
+            this.label1.Location = new System.Drawing.Point(119, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 23);
+            this.label1.Size = new System.Drawing.Size(58, 23);
             this.label1.TabIndex = 5;
-            this.label1.Text = "Логин:";
+            this.label1.Text = "Логин";
             // 
             // txtLogin
             // 
@@ -80,7 +80,7 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(123, 109);
+            this.txtPassword.Location = new System.Drawing.Point(123, 131);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(136, 30);
             this.txtPassword.TabIndex = 7;
@@ -101,7 +101,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MaximizeBox = false;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
