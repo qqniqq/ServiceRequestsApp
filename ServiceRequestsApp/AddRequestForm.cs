@@ -10,14 +10,78 @@ namespace ServiceRequestsApp
         public AddRequestForm()
         {
             InitializeComponent();
-            comboDepartment.SelectedIndex = -1;
-            comboPriority.SelectedIndex = -1;
-            comboProblemType.SelectedIndex = -1;
-            comboSpecialist.SelectedIndex = -1;
+
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+
+            SetupPlaceholderTextBox(txtFullName, "ФИО сотрудника");
+            SetupPlaceholderTextBox(txtContact, "Контактные данные");
+            SetupPlaceholderTextBox(txtDescription, "Описание проблемы");
+
+            comboProblemType.Items.Clear();
+            comboProblemType.Items.AddRange(new object[]
+            {
+                "Тип неисправности",
+                "ПК врача",
+                "Принтер",
+                "МФУ",
+                "Сеть",
+                "Телефония",
+                "Медицинская информационная система",
+                "Программное обеспечение",
+                "Другое"
+            });
+
+            SetupPlaceholderComboBox(comboDepartment, "Подразделение");
+            SetupPlaceholderComboBox(comboPriority, "Приоритет заявки");
+            SetupPlaceholderComboBox(comboProblemType, "Тип неисправности");
+            SetupPlaceholderComboBox(comboSpecialist, "Ответственный специалист");
         }
+
+        private void SetupPlaceholderTextBox(TextBox textBox, string placeholder)
+        {
+            textBox.Text = placeholder;
+            textBox.ForeColor = System.Drawing.Color.Gray;
+
+            textBox.Enter += (s, e) =>
+            {
+                if (textBox.ForeColor == System.Drawing.Color.Gray && textBox.Text == placeholder)
+                {
+                    textBox.Text = string.Empty;
+                    textBox.ForeColor = System.Drawing.Color.Black;
+                }
+            };
+
+            textBox.Leave += (s, e) =>
+            {
+                if (string.IsNullOrWhiteSpace(textBox.Text))
+                {
+                    textBox.Text = placeholder;
+                    textBox.ForeColor = System.Drawing.Color.Gray;
+                }
+            };
+        }
+
+        private void SetupPlaceholderComboBox(ComboBox comboBox, string placeholder)
+        {
+            comboBox.Items.Remove(placeholder);
+            comboBox.Items.Insert(0, placeholder);
+            comboBox.SelectedIndex = 0;
+        }
+
+        private bool IsPlaceholderText(TextBox textBox)
+        {
+            return textBox.ForeColor == System.Drawing.Color.Gray;
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtFullName.Text))
+            if (IsPlaceholderText(txtFullName) || string.IsNullOrWhiteSpace(txtFullName.Text))
             {
                 MessageBox.Show("Введите ФИО сотрудника");
                 txtFullName.Focus();
@@ -29,31 +93,31 @@ namespace ServiceRequestsApp
                 txtFullName.Focus();
                 return;
             }
-            if (comboDepartment.SelectedIndex == -1)
+            if (comboDepartment.SelectedIndex <= 0)
             {
                 MessageBox.Show("Выберите подразделение");
                 comboDepartment.Focus();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(txtContact.Text))
+            if (IsPlaceholderText(txtContact) || string.IsNullOrWhiteSpace(txtContact.Text))
             {
                 MessageBox.Show("Введите контактные данные");
                 txtContact.Focus();
                 return;
             }
-            if (comboProblemType.SelectedIndex == -1)
+            if (comboProblemType.SelectedIndex <= 0)
             {
                 MessageBox.Show("Выберите тип неисправности");
                 comboProblemType.Focus();
                 return;
             }
-            if (comboSpecialist.SelectedIndex == -1)
+            if (comboSpecialist.SelectedIndex <= 0)
             {
                 MessageBox.Show("Выберите ответственного специалиста");
                 comboSpecialist.Focus();
                 return;
             }
-            if (string.IsNullOrWhiteSpace(txtDescription.Text))
+            if (IsPlaceholderText(txtDescription) || string.IsNullOrWhiteSpace(txtDescription.Text))
             {
                 MessageBox.Show("Введите описание проблемы");
                 txtDescription.Focus();
@@ -65,7 +129,7 @@ namespace ServiceRequestsApp
                 txtDescription.Focus();
                 return;
             }
-            if (comboPriority.SelectedIndex == -1)
+            if (comboPriority.SelectedIndex <= 0)
             {
                 MessageBox.Show("Выберите приоритет заявки");
                 comboPriority.Focus();
@@ -85,7 +149,7 @@ namespace ServiceRequestsApp
                 cmd.Parameters.AddWithValue("@FullName", txtFullName.Text);
                 cmd.Parameters.AddWithValue("@Department", comboDepartment.Text);
                 cmd.Parameters.AddWithValue("@Contact", txtContact.Text);
-                cmd.Parameters.AddWithValue("@DateCreated", DateTime.Now.ToString());
+                cmd.Parameters.AddWithValue("@DateCreated", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
                 cmd.Parameters.AddWithValue("@ProblemType", comboProblemType.Text);
                 cmd.Parameters.AddWithValue("@Description", txtDescription.Text);
                 cmd.Parameters.AddWithValue("@Priority", comboPriority.Text);
@@ -96,16 +160,6 @@ namespace ServiceRequestsApp
             }
             MessageBox.Show("Заявка успешно добавлена");
             Close();
-            if (txtFullName.Text.Length < 5 || txtFullName.Text.Length > 100)
-            {
-                MessageBox.Show("ФИО должно быть от 5 до 100 символов");
-                return;
-            }
-            if (txtDescription.Text.Length < 10 || txtDescription.Text.Length > 500)
-            {
-                MessageBox.Show("Описание должно быть от 10 до 500 символов");
-                return;
-            }
         }
         private void comboDepartment_SelectedIndexChanged(object sender, EventArgs e)
         {
