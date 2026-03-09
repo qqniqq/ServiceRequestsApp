@@ -120,5 +120,10 @@ namespace ServiceRequestsApp
         {
             this.Close();
         }
+
+        private void AddRequestForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

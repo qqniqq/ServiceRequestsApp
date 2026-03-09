@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.labelMenuUsers = new System.Windows.Forms.Label();
             this.labelMenuReports = new System.Windows.Forms.Label();
@@ -80,8 +81,9 @@
             this.panelSidebar.Controls.Add(this.labelAppTitle);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(184, 877);
+            this.panelSidebar.Size = new System.Drawing.Size(230, 1096);
             this.panelSidebar.TabIndex = 0;
             // 
             // labelMenuUsers
@@ -89,9 +91,10 @@
             this.labelMenuUsers.AutoSize = true;
             this.labelMenuUsers.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelMenuUsers.ForeColor = System.Drawing.Color.White;
-            this.labelMenuUsers.Location = new System.Drawing.Point(22, 319);
+            this.labelMenuUsers.Location = new System.Drawing.Point(28, 399);
+            this.labelMenuUsers.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuUsers.Name = "labelMenuUsers";
-            this.labelMenuUsers.Size = new System.Drawing.Size(112, 23);
+            this.labelMenuUsers.Size = new System.Drawing.Size(149, 23);
             this.labelMenuUsers.TabIndex = 6;
             this.labelMenuUsers.Text = "👥 Пользователи";
             // 
@@ -100,9 +103,10 @@
             this.labelMenuReports.AutoSize = true;
             this.labelMenuReports.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelMenuReports.ForeColor = System.Drawing.Color.White;
-            this.labelMenuReports.Location = new System.Drawing.Point(22, 279);
+            this.labelMenuReports.Location = new System.Drawing.Point(28, 349);
+            this.labelMenuReports.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuReports.Name = "labelMenuReports";
-            this.labelMenuReports.Size = new System.Drawing.Size(79, 23);
+            this.labelMenuReports.Size = new System.Drawing.Size(96, 23);
             this.labelMenuReports.TabIndex = 5;
             this.labelMenuReports.Text = "🕒 Отчёты";
             // 
@@ -111,9 +115,10 @@
             this.labelMenuDepartments.AutoSize = true;
             this.labelMenuDepartments.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelMenuDepartments.ForeColor = System.Drawing.Color.White;
-            this.labelMenuDepartments.Location = new System.Drawing.Point(22, 239);
+            this.labelMenuDepartments.Location = new System.Drawing.Point(28, 299);
+            this.labelMenuDepartments.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuDepartments.Name = "labelMenuDepartments";
-            this.labelMenuDepartments.Size = new System.Drawing.Size(116, 23);
+            this.labelMenuDepartments.Size = new System.Drawing.Size(123, 23);
             this.labelMenuDepartments.TabIndex = 4;
             this.labelMenuDepartments.Text = "📄 Отделения";
             // 
@@ -122,9 +127,10 @@
             this.labelMenuEquipment.AutoSize = true;
             this.labelMenuEquipment.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelMenuEquipment.ForeColor = System.Drawing.Color.White;
-            this.labelMenuEquipment.Location = new System.Drawing.Point(22, 199);
+            this.labelMenuEquipment.Location = new System.Drawing.Point(28, 249);
+            this.labelMenuEquipment.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuEquipment.Name = "labelMenuEquipment";
-            this.labelMenuEquipment.Size = new System.Drawing.Size(134, 23);
+            this.labelMenuEquipment.Size = new System.Drawing.Size(155, 23);
             this.labelMenuEquipment.TabIndex = 3;
             this.labelMenuEquipment.Text = "🖥 Оборудование";
             // 
@@ -133,9 +139,10 @@
             this.labelMenuRequests.AutoSize = true;
             this.labelMenuRequests.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.labelMenuRequests.ForeColor = System.Drawing.Color.White;
-            this.labelMenuRequests.Location = new System.Drawing.Point(22, 159);
+            this.labelMenuRequests.Location = new System.Drawing.Point(28, 199);
+            this.labelMenuRequests.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuRequests.Name = "labelMenuRequests";
-            this.labelMenuRequests.Size = new System.Drawing.Size(89, 23);
+            this.labelMenuRequests.Size = new System.Drawing.Size(99, 23);
             this.labelMenuRequests.TabIndex = 2;
             this.labelMenuRequests.Text = "📋 Заявки";
             // 
@@ -144,9 +151,10 @@
             this.labelMenuDashboard.AutoSize = true;
             this.labelMenuDashboard.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.labelMenuDashboard.ForeColor = System.Drawing.Color.White;
-            this.labelMenuDashboard.Location = new System.Drawing.Point(22, 119);
+            this.labelMenuDashboard.Location = new System.Drawing.Point(28, 149);
+            this.labelMenuDashboard.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelMenuDashboard.Name = "labelMenuDashboard";
-            this.labelMenuDashboard.Size = new System.Drawing.Size(84, 23);
+            this.labelMenuDashboard.Size = new System.Drawing.Size(96, 23);
             this.labelMenuDashboard.TabIndex = 1;
             this.labelMenuDashboard.Text = "✅ Панель";
             // 
@@ -155,7 +163,8 @@
             this.labelAppTitle.AutoSize = true;
             this.labelAppTitle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.labelAppTitle.ForeColor = System.Drawing.Color.White;
-            this.labelAppTitle.Location = new System.Drawing.Point(22, 33);
+            this.labelAppTitle.Location = new System.Drawing.Point(28, 41);
+            this.labelAppTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelAppTitle.Name = "labelAppTitle";
             this.labelAppTitle.Size = new System.Drawing.Size(126, 28);
             this.labelAppTitle.TabIndex = 0;
@@ -167,9 +176,10 @@
             this.panelHeader.Controls.Add(this.lblUser);
             this.panelHeader.Controls.Add(this.labelPageTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHeader.Location = new System.Drawing.Point(184, 0);
+            this.panelHeader.Location = new System.Drawing.Point(230, 0);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(1401, 73);
+            this.panelHeader.Size = new System.Drawing.Size(1694, 91);
             this.panelHeader.TabIndex = 1;
             // 
             // lblUser
@@ -178,9 +188,10 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
-            this.lblUser.Location = new System.Drawing.Point(1104, 27);
+            this.lblUser.Location = new System.Drawing.Point(1323, 34);
+            this.lblUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(57, 20);
+            this.lblUser.Size = new System.Drawing.Size(55, 20);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "lblUser";
             // 
@@ -189,9 +200,10 @@
             this.labelPageTitle.AutoSize = true;
             this.labelPageTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
             this.labelPageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(73)))));
-            this.labelPageTitle.Location = new System.Drawing.Point(18, 19);
+            this.labelPageTitle.Location = new System.Drawing.Point(22, 24);
+            this.labelPageTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelPageTitle.Name = "labelPageTitle";
-            this.labelPageTitle.Size = new System.Drawing.Size(113, 37);
+            this.labelPageTitle.Size = new System.Drawing.Size(110, 37);
             this.labelPageTitle.TabIndex = 0;
             this.labelPageTitle.Text = "Заявки";
             // 
@@ -199,9 +211,10 @@
             // 
             this.panelStatNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(136)))), ((int)(((byte)(229)))));
             this.panelStatNew.Controls.Add(this.lblStatNew);
-            this.panelStatNew.Location = new System.Drawing.Point(206, 90);
+            this.panelStatNew.Location = new System.Drawing.Point(258, 112);
+            this.panelStatNew.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelStatNew.Name = "panelStatNew";
-            this.panelStatNew.Size = new System.Drawing.Size(204, 60);
+            this.panelStatNew.Size = new System.Drawing.Size(255, 75);
             this.panelStatNew.TabIndex = 2;
             // 
             // lblStatNew
@@ -209,9 +222,10 @@
             this.lblStatNew.AutoSize = true;
             this.lblStatNew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblStatNew.ForeColor = System.Drawing.Color.White;
-            this.lblStatNew.Location = new System.Drawing.Point(18, 16);
+            this.lblStatNew.Location = new System.Drawing.Point(22, 20);
+            this.lblStatNew.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatNew.Name = "lblStatNew";
-            this.lblStatNew.Size = new System.Drawing.Size(105, 28);
+            this.lblStatNew.Size = new System.Drawing.Size(101, 28);
             this.lblStatNew.TabIndex = 0;
             this.lblStatNew.Text = "Новые: 0";
             // 
@@ -219,9 +233,10 @@
             // 
             this.panelStatInWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(137)))), ((int)(((byte)(245)))));
             this.panelStatInWork.Controls.Add(this.lblStatInWork);
-            this.panelStatInWork.Location = new System.Drawing.Point(422, 90);
+            this.panelStatInWork.Location = new System.Drawing.Point(528, 112);
+            this.panelStatInWork.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelStatInWork.Name = "panelStatInWork";
-            this.panelStatInWork.Size = new System.Drawing.Size(204, 60);
+            this.panelStatInWork.Size = new System.Drawing.Size(255, 75);
             this.panelStatInWork.TabIndex = 3;
             // 
             // lblStatInWork
@@ -229,9 +244,10 @@
             this.lblStatInWork.AutoSize = true;
             this.lblStatInWork.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblStatInWork.ForeColor = System.Drawing.Color.White;
-            this.lblStatInWork.Location = new System.Drawing.Point(18, 16);
+            this.lblStatInWork.Location = new System.Drawing.Point(22, 20);
+            this.lblStatInWork.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatInWork.Name = "lblStatInWork";
-            this.lblStatInWork.Size = new System.Drawing.Size(132, 28);
+            this.lblStatInWork.Size = new System.Drawing.Size(121, 28);
             this.lblStatInWork.TabIndex = 0;
             this.lblStatInWork.Text = "В работе: 0";
             // 
@@ -239,9 +255,10 @@
             // 
             this.panelStatDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(120)))), ((int)(((byte)(230)))));
             this.panelStatDone.Controls.Add(this.lblStatDone);
-            this.panelStatDone.Location = new System.Drawing.Point(638, 90);
+            this.panelStatDone.Location = new System.Drawing.Point(798, 112);
+            this.panelStatDone.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelStatDone.Name = "panelStatDone";
-            this.panelStatDone.Size = new System.Drawing.Size(204, 60);
+            this.panelStatDone.Size = new System.Drawing.Size(255, 75);
             this.panelStatDone.TabIndex = 4;
             // 
             // lblStatDone
@@ -249,9 +266,10 @@
             this.lblStatDone.AutoSize = true;
             this.lblStatDone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblStatDone.ForeColor = System.Drawing.Color.White;
-            this.lblStatDone.Location = new System.Drawing.Point(18, 16);
+            this.lblStatDone.Location = new System.Drawing.Point(22, 20);
+            this.lblStatDone.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblStatDone.Name = "lblStatDone";
-            this.lblStatDone.Size = new System.Drawing.Size(142, 28);
+            this.lblStatDone.Size = new System.Drawing.Size(147, 28);
             this.lblStatDone.TabIndex = 0;
             this.lblStatDone.Text = "Выполнено: 0";
             // 
@@ -260,9 +278,10 @@
             this.txtSearch.BackColor = System.Drawing.Color.White;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.txtSearch.Location = new System.Drawing.Point(206, 171);
+            this.txtSearch.Location = new System.Drawing.Point(258, 214);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(636, 30);
+            this.txtSearch.Size = new System.Drawing.Size(794, 30);
             this.txtSearch.TabIndex = 5;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -276,9 +295,10 @@
             this.btnAddRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddRequest.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnAddRequest.ForeColor = System.Drawing.Color.White;
-            this.btnAddRequest.Location = new System.Drawing.Point(858, 167);
+            this.btnAddRequest.Location = new System.Drawing.Point(1072, 209);
+            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAddRequest.Name = "btnAddRequest";
-            this.btnAddRequest.Size = new System.Drawing.Size(196, 36);
+            this.btnAddRequest.Size = new System.Drawing.Size(245, 45);
             this.btnAddRequest.TabIndex = 6;
             this.btnAddRequest.Text = "+ Новая заявка";
             this.btnAddRequest.UseVisualStyleBackColor = false;
@@ -293,12 +313,13 @@
             this.dataGridViewRequests.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(229)))), ((int)(((byte)(236)))));
-            this.dataGridViewRequests.Location = new System.Drawing.Point(206, 215);
+            this.dataGridViewRequests.Location = new System.Drawing.Point(258, 269);
+            this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
             this.dataGridViewRequests.ReadOnly = true;
             this.dataGridViewRequests.RowHeadersWidth = 51;
             this.dataGridViewRequests.RowTemplate.Height = 24;
-            this.dataGridViewRequests.Size = new System.Drawing.Size(1363, 584);
+            this.dataGridViewRequests.Size = new System.Drawing.Size(1704, 730);
             this.dataGridViewRequests.TabIndex = 7;
             // 
             // label1
@@ -306,9 +327,10 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(132)))), ((int)(((byte)(147)))));
-            this.label1.Location = new System.Drawing.Point(202, 151);
+            this.label1.Location = new System.Drawing.Point(252, 189);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 21);
+            this.label1.Size = new System.Drawing.Size(106, 21);
             this.label1.TabIndex = 8;
             this.label1.Text = "Поиск заявок";
             // 
@@ -320,9 +342,10 @@
             "Новая",
             "В работе",
             "Выполнена"});
-            this.comboStatus.Location = new System.Drawing.Point(1060, 171);
+            this.comboStatus.Location = new System.Drawing.Point(1325, 214);
+            this.comboStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.comboStatus.Name = "comboStatus";
-            this.comboStatus.Size = new System.Drawing.Size(156, 31);
+            this.comboStatus.Size = new System.Drawing.Size(194, 31);
             this.comboStatus.TabIndex = 9;
             // 
             // btnUpdateStatus
@@ -334,9 +357,10 @@
             this.btnUpdateStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
             this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStatus.Location = new System.Drawing.Point(1210, 167);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(1512, 209);
+            this.btnUpdateStatus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
-            this.btnUpdateStatus.Size = new System.Drawing.Size(150, 36);
+            this.btnUpdateStatus.Size = new System.Drawing.Size(188, 45);
             this.btnUpdateStatus.TabIndex = 10;
             this.btnUpdateStatus.Text = "Изменить статус";
             this.btnUpdateStatus.UseVisualStyleBackColor = false;
@@ -351,9 +375,10 @@
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(136)))), ((int)(((byte)(157)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(1366, 167);
+            this.btnEdit.Location = new System.Drawing.Point(1708, 209);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(78, 36);
+            this.btnEdit.Size = new System.Drawing.Size(98, 45);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Правка";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -368,9 +393,10 @@
             this.btnDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(86)))), ((int)(((byte)(112)))));
-            this.btnDetails.Location = new System.Drawing.Point(1450, 167);
+            this.btnDetails.Location = new System.Drawing.Point(1812, 209);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(78, 36);
+            this.btnDetails.Size = new System.Drawing.Size(98, 45);
             this.btnDetails.TabIndex = 12;
             this.btnDetails.Text = "Детали";
             this.btnDetails.UseVisualStyleBackColor = false;
@@ -385,9 +411,10 @@
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1534, 167);
+            this.btnDelete.Location = new System.Drawing.Point(1918, 209);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(35, 36);
+            this.btnDelete.Size = new System.Drawing.Size(44, 45);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "✕";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -398,9 +425,10 @@
             this.lblDateFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDateFrom.AutoSize = true;
             this.lblDateFrom.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
-            this.lblDateFrom.Location = new System.Drawing.Point(573, 823);
+            this.lblDateFrom.Location = new System.Drawing.Point(716, 1029);
+            this.lblDateFrom.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateFrom.Name = "lblDateFrom";
-            this.lblDateFrom.Size = new System.Drawing.Size(24, 23);
+            this.lblDateFrom.Size = new System.Drawing.Size(21, 23);
             this.lblDateFrom.TabIndex = 13;
             this.lblDateFrom.Text = "С";
             // 
@@ -408,9 +436,10 @@
             // 
             this.dateFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateFrom.Location = new System.Drawing.Point(603, 819);
+            this.dateFrom.Location = new System.Drawing.Point(754, 1024);
+            this.dateFrom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateFrom.Name = "dateFrom";
-            this.dateFrom.Size = new System.Drawing.Size(130, 30);
+            this.dateFrom.Size = new System.Drawing.Size(162, 30);
             this.dateFrom.TabIndex = 14;
             // 
             // lblDateTo
@@ -418,7 +447,8 @@
             this.lblDateTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblDateTo.AutoSize = true;
             this.lblDateTo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(94)))), ((int)(((byte)(111)))));
-            this.lblDateTo.Location = new System.Drawing.Point(739, 823);
+            this.lblDateTo.Location = new System.Drawing.Point(924, 1029);
+            this.lblDateTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDateTo.Name = "lblDateTo";
             this.lblDateTo.Size = new System.Drawing.Size(32, 23);
             this.lblDateTo.TabIndex = 15;
@@ -428,9 +458,10 @@
             // 
             this.dateTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTo.Location = new System.Drawing.Point(777, 819);
+            this.dateTo.Location = new System.Drawing.Point(971, 1024);
+            this.dateTo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dateTo.Name = "dateTo";
-            this.dateTo.Size = new System.Drawing.Size(130, 30);
+            this.dateTo.Size = new System.Drawing.Size(162, 30);
             this.dateTo.TabIndex = 16;
             // 
             // btnReport
@@ -443,9 +474,10 @@
             this.btnReport.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(136)))), ((int)(((byte)(157)))));
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.ForeColor = System.Drawing.Color.White;
-            this.btnReport.Location = new System.Drawing.Point(913, 815);
+            this.btnReport.Location = new System.Drawing.Point(1141, 1019);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnReport.Name = "btnReport";
-            this.btnReport.Size = new System.Drawing.Size(115, 37);
+            this.btnReport.Size = new System.Drawing.Size(144, 46);
             this.btnReport.TabIndex = 17;
             this.btnReport.Text = "Отчёт";
             this.btnReport.UseVisualStyleBackColor = false;
@@ -461,9 +493,10 @@
             this.btnLogout.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.Location = new System.Drawing.Point(1034, 815);
+            this.btnLogout.Location = new System.Drawing.Point(1292, 1019);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(239, 37);
+            this.btnLogout.Size = new System.Drawing.Size(299, 46);
             this.btnLogout.TabIndex = 18;
             this.btnLogout.Text = "Выйти на форму авторизации";
             this.btnLogout.UseVisualStyleBackColor = false;
@@ -471,10 +504,10 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
-            this.ClientSize = new System.Drawing.Size(1585, 877);
+            this.ClientSize = new System.Drawing.Size(1924, 1096);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnReport);
             this.Controls.Add(this.dateTo);
@@ -497,6 +530,8 @@
             this.Controls.Add(this.panelSidebar);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

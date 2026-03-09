@@ -195,11 +195,7 @@ namespace ServiceRequestsApp
 
         private int? GetSelectedRequestId()
         {
-            if (currentRole != "Специалист IT")
-            {
-                MessageBox.Show("Недостаточно прав для изменения статуса заявки");
-                return;
-            }
+
 
             if (dataGridViewRequests.CurrentRow == null)
                 return null;
