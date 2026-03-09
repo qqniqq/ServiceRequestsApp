@@ -117,4 +117,1196 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;labelMenuUsers.Name" xml:space="preserve">
+    <value>labelMenuUsers</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.Name" xml:space="preserve">
+    <value>labelMenuReports</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.Name" xml:space="preserve">
+    <value>labelMenuDepartments</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.Name" xml:space="preserve">
+    <value>labelMenuEquipment</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.Name" xml:space="preserve">
+    <value>labelMenuRequests</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.Name" xml:space="preserve">
+    <value>labelMenuDashboard</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.Name" xml:space="preserve">
+    <value>labelAppTitle</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelSidebar.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="panelSidebar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="panelSidebar.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panelSidebar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>190, 899</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="panelSidebar.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;panelSidebar.Name" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;panelSidebar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelSidebar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelSidebar.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="labelMenuUsers.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMenuUsers.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="labelMenuUsers.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 399</value>
+  </data>
+  <data name="labelMenuUsers.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMenuUsers.Size" type="System.Drawing.Size, System.Drawing">
+    <value>149, 23</value>
+  </data>
+  <data name="labelMenuUsers.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="labelMenuUsers.Text" xml:space="preserve">
+    <value>👥 Пользователи</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.Name" xml:space="preserve">
+    <value>labelMenuUsers</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuUsers.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelMenuReports.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMenuReports.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="labelMenuReports.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 349</value>
+  </data>
+  <data name="labelMenuReports.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMenuReports.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 23</value>
+  </data>
+  <data name="labelMenuReports.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="labelMenuReports.Text" xml:space="preserve">
+    <value>🕒 Отчёты</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.Name" xml:space="preserve">
+    <value>labelMenuReports</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuReports.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="labelMenuDepartments.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMenuDepartments.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="labelMenuDepartments.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 299</value>
+  </data>
+  <data name="labelMenuDepartments.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMenuDepartments.Size" type="System.Drawing.Size, System.Drawing">
+    <value>123, 23</value>
+  </data>
+  <data name="labelMenuDepartments.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="labelMenuDepartments.Text" xml:space="preserve">
+    <value>📄 Отделения</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.Name" xml:space="preserve">
+    <value>labelMenuDepartments</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDepartments.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="labelMenuEquipment.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMenuEquipment.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="labelMenuEquipment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 249</value>
+  </data>
+  <data name="labelMenuEquipment.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMenuEquipment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>155, 23</value>
+  </data>
+  <data name="labelMenuEquipment.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="labelMenuEquipment.Text" xml:space="preserve">
+    <value>🖥 Оборудование</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.Name" xml:space="preserve">
+    <value>labelMenuEquipment</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuEquipment.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="labelMenuRequests.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMenuRequests.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt, style=Bold</value>
+  </data>
+  <data name="labelMenuRequests.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 199</value>
+  </data>
+  <data name="labelMenuRequests.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMenuRequests.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 23</value>
+  </data>
+  <data name="labelMenuRequests.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="labelMenuRequests.Text" xml:space="preserve">
+    <value>📋 Заявки</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.Name" xml:space="preserve">
+    <value>labelMenuRequests</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuRequests.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="labelMenuDashboard.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelMenuDashboard.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="labelMenuDashboard.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 149</value>
+  </data>
+  <data name="labelMenuDashboard.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelMenuDashboard.Size" type="System.Drawing.Size, System.Drawing">
+    <value>96, 23</value>
+  </data>
+  <data name="labelMenuDashboard.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="labelMenuDashboard.Text" xml:space="preserve">
+    <value>✅ Панель</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.Name" xml:space="preserve">
+    <value>labelMenuDashboard</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelMenuDashboard.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="labelAppTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelAppTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="labelAppTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>28, 41</value>
+  </data>
+  <data name="labelAppTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelAppTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>126, 28</value>
+  </data>
+  <data name="labelAppTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelAppTitle.Text" xml:space="preserve">
+    <value>IT HelpDesk</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.Name" xml:space="preserve">
+    <value>labelAppTitle</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.Parent" xml:space="preserve">
+    <value>panelSidebar</value>
+  </data>
+  <data name="&gt;&gt;labelAppTitle.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;lblUser.Name" xml:space="preserve">
+    <value>lblUser</value>
+  </data>
+  <data name="&gt;&gt;lblUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUser.Parent" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;lblUser.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.Name" xml:space="preserve">
+    <value>labelPageTitle</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.Parent" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="panelHeader.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="panelHeader.Location" type="System.Drawing.Point, System.Drawing">
+    <value>190, 0</value>
+  </data>
+  <data name="panelHeader.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panelHeader.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1521, 91</value>
+  </data>
+  <data name="panelHeader.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.Name" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelHeader.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="lblUser.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="lblUser.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblUser.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="lblUser.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1150, 34</value>
+  </data>
+  <data name="lblUser.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblUser.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 20</value>
+  </data>
+  <data name="lblUser.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="lblUser.Text" xml:space="preserve">
+    <value>lblUser</value>
+  </data>
+  <data name="&gt;&gt;lblUser.Name" xml:space="preserve">
+    <value>lblUser</value>
+  </data>
+  <data name="&gt;&gt;lblUser.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblUser.Parent" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;lblUser.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="labelPageTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="labelPageTitle.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 16pt, style=Bold</value>
+  </data>
+  <data name="labelPageTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 24</value>
+  </data>
+  <data name="labelPageTitle.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="labelPageTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 37</value>
+  </data>
+  <data name="labelPageTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="labelPageTitle.Text" xml:space="preserve">
+    <value>Заявки</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.Name" xml:space="preserve">
+    <value>labelPageTitle</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.Parent" xml:space="preserve">
+    <value>panelHeader</value>
+  </data>
+  <data name="&gt;&gt;labelPageTitle.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.Name" xml:space="preserve">
+    <value>lblStatNew</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.Parent" xml:space="preserve">
+    <value>panelStatNew</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelStatNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 112</value>
+  </data>
+  <data name="panelStatNew.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panelStatNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 75</value>
+  </data>
+  <data name="panelStatNew.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panelStatNew.Name" xml:space="preserve">
+    <value>panelStatNew</value>
+  </data>
+  <data name="&gt;&gt;panelStatNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelStatNew.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelStatNew.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="lblStatNew.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblStatNew.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="lblStatNew.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 20</value>
+  </data>
+  <data name="lblStatNew.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblStatNew.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 28</value>
+  </data>
+  <data name="lblStatNew.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblStatNew.Text" xml:space="preserve">
+    <value>Новые: 0</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.Name" xml:space="preserve">
+    <value>lblStatNew</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.Parent" xml:space="preserve">
+    <value>panelStatNew</value>
+  </data>
+  <data name="&gt;&gt;lblStatNew.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.Name" xml:space="preserve">
+    <value>lblStatInWork</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.Parent" xml:space="preserve">
+    <value>panelStatInWork</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelStatInWork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>462, 112</value>
+  </data>
+  <data name="panelStatInWork.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panelStatInWork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 75</value>
+  </data>
+  <data name="panelStatInWork.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panelStatInWork.Name" xml:space="preserve">
+    <value>panelStatInWork</value>
+  </data>
+  <data name="&gt;&gt;panelStatInWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelStatInWork.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelStatInWork.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="lblStatInWork.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblStatInWork.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="lblStatInWork.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 20</value>
+  </data>
+  <data name="lblStatInWork.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblStatInWork.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 28</value>
+  </data>
+  <data name="lblStatInWork.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblStatInWork.Text" xml:space="preserve">
+    <value>В работе: 0</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.Name" xml:space="preserve">
+    <value>lblStatInWork</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.Parent" xml:space="preserve">
+    <value>panelStatInWork</value>
+  </data>
+  <data name="&gt;&gt;lblStatInWork.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.Name" xml:space="preserve">
+    <value>lblStatDone</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.Parent" xml:space="preserve">
+    <value>panelStatDone</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panelStatDone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>725, 112</value>
+  </data>
+  <data name="panelStatDone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="panelStatDone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>255, 75</value>
+  </data>
+  <data name="panelStatDone.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;panelStatDone.Name" xml:space="preserve">
+    <value>panelStatDone</value>
+  </data>
+  <data name="&gt;&gt;panelStatDone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panelStatDone.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panelStatDone.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="lblStatDone.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblStatDone.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 12pt, style=Bold</value>
+  </data>
+  <data name="lblStatDone.Location" type="System.Drawing.Point, System.Drawing">
+    <value>22, 20</value>
+  </data>
+  <data name="lblStatDone.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblStatDone.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 28</value>
+  </data>
+  <data name="lblStatDone.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblStatDone.Text" xml:space="preserve">
+    <value>Выполнено: 0</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.Name" xml:space="preserve">
+    <value>lblStatDone</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.Parent" xml:space="preserve">
+    <value>panelStatDone</value>
+  </data>
+  <data name="&gt;&gt;lblStatDone.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtSearch.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10pt</value>
+  </data>
+  <data name="txtSearch.Location" type="System.Drawing.Point, System.Drawing">
+    <value>199, 214</value>
+  </data>
+  <data name="txtSearch.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="txtSearch.Size" type="System.Drawing.Size, System.Drawing">
+    <value>781, 30</value>
+  </data>
+  <data name="txtSearch.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Name" xml:space="preserve">
+    <value>txtSearch</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtSearch.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="btnAddRequest.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnAddRequest.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="btnAddRequest.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1001, 209</value>
+  </data>
+  <data name="btnAddRequest.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnAddRequest.Size" type="System.Drawing.Size, System.Drawing">
+    <value>245, 45</value>
+  </data>
+  <data name="btnAddRequest.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="btnAddRequest.Text" xml:space="preserve">
+    <value>+ Новая заявка</value>
+  </data>
+  <data name="&gt;&gt;btnAddRequest.Name" xml:space="preserve">
+    <value>btnAddRequest</value>
+  </data>
+  <data name="&gt;&gt;btnAddRequest.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnAddRequest.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAddRequest.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="dataGridViewRequests.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 262</value>
+  </data>
+  <data name="dataGridViewRequests.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="dataGridViewRequests.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1703, 714</value>
+  </data>
+  <data name="dataGridViewRequests.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewRequests.Name" xml:space="preserve">
+    <value>dataGridViewRequests</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewRequests.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewRequests.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dataGridViewRequests.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9.5pt</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 191</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 21</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Поиск заявок</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="comboStatus.Items" xml:space="preserve">
+    <value>Новая</value>
+  </data>
+  <data name="comboStatus.Items1" xml:space="preserve">
+    <value>В работе</value>
+  </data>
+  <data name="comboStatus.Items2" xml:space="preserve">
+    <value>Выполнена</value>
+  </data>
+  <data name="comboStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1335, 112</value>
+  </data>
+  <data name="comboStatus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="comboStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 31</value>
+  </data>
+  <data name="comboStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;comboStatus.Name" xml:space="preserve">
+    <value>comboStatus</value>
+  </data>
+  <data name="&gt;&gt;comboStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboStatus.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnUpdateStatus.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnUpdateStatus.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1335, 149</value>
+  </data>
+  <data name="btnUpdateStatus.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnUpdateStatus.Size" type="System.Drawing.Size, System.Drawing">
+    <value>256, 45</value>
+  </data>
+  <data name="btnUpdateStatus.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="btnUpdateStatus.Text" xml:space="preserve">
+    <value>Изменить статус</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateStatus.Name" xml:space="preserve">
+    <value>btnUpdateStatus</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateStatus.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateStatus.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnUpdateStatus.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnEdit.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1335, 209</value>
+  </data>
+  <data name="btnEdit.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 45</value>
+  </data>
+  <data name="btnEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="btnEdit.Text" xml:space="preserve">
+    <value>Правка</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Name" xml:space="preserve">
+    <value>btnEdit</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnEdit.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnDetails.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnDetails.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1441, 209</value>
+  </data>
+  <data name="btnDetails.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnDetails.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 45</value>
+  </data>
+  <data name="btnDetails.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="btnDetails.Text" xml:space="preserve">
+    <value>Детали</value>
+  </data>
+  <data name="&gt;&gt;btnDetails.Name" xml:space="preserve">
+    <value>btnDetails</value>
+  </data>
+  <data name="&gt;&gt;btnDetails.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDetails.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDetails.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnDelete.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnDelete.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1547, 209</value>
+  </data>
+  <data name="btnDelete.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnDelete.Size" type="System.Drawing.Size, System.Drawing">
+    <value>44, 45</value>
+  </data>
+  <data name="btnDelete.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnDelete.Text" xml:space="preserve">
+    <value>✕</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Name" xml:space="preserve">
+    <value>btnDelete</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnDelete.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="lblDateFrom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lblDateFrom.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDateFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>716, 832</value>
+  </data>
+  <data name="lblDateFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDateFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>21, 23</value>
+  </data>
+  <data name="lblDateFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="lblDateFrom.Text" xml:space="preserve">
+    <value>С</value>
+  </data>
+  <data name="&gt;&gt;lblDateFrom.Name" xml:space="preserve">
+    <value>lblDateFrom</value>
+  </data>
+  <data name="&gt;&gt;lblDateFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDateFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDateFrom.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="dateFrom.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="dateFrom.Location" type="System.Drawing.Point, System.Drawing">
+    <value>754, 827</value>
+  </data>
+  <data name="dateFrom.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="dateFrom.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 30</value>
+  </data>
+  <data name="dateFrom.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;dateFrom.Name" xml:space="preserve">
+    <value>dateFrom</value>
+  </data>
+  <data name="&gt;&gt;dateFrom.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateFrom.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dateFrom.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblDateTo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="lblDateTo.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDateTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>924, 832</value>
+  </data>
+  <data name="lblDateTo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 0, 4, 0</value>
+  </data>
+  <data name="lblDateTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>32, 23</value>
+  </data>
+  <data name="lblDateTo.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="lblDateTo.Text" xml:space="preserve">
+    <value>По</value>
+  </data>
+  <data name="&gt;&gt;lblDateTo.Name" xml:space="preserve">
+    <value>lblDateTo</value>
+  </data>
+  <data name="&gt;&gt;lblDateTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;lblDateTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;lblDateTo.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="dateTo.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="dateTo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>971, 827</value>
+  </data>
+  <data name="dateTo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="dateTo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>162, 30</value>
+  </data>
+  <data name="dateTo.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;dateTo.Name" xml:space="preserve">
+    <value>dateTo</value>
+  </data>
+  <data name="&gt;&gt;dateTo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DateTimePicker, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dateTo.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dateTo.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnReport.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnReport.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnReport.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1141, 822</value>
+  </data>
+  <data name="btnReport.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnReport.Size" type="System.Drawing.Size, System.Drawing">
+    <value>144, 46</value>
+  </data>
+  <data name="btnReport.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnReport.Text" xml:space="preserve">
+    <value>Отчёт</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Name" xml:space="preserve">
+    <value>btnReport</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnReport.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnReport.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnLogout.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Bottom, Left</value>
+  </data>
+  <data name="btnLogout.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="btnLogout.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1292, 822</value>
+  </data>
+  <data name="btnLogout.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="btnLogout.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 46</value>
+  </data>
+  <data name="btnLogout.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnLogout.Text" xml:space="preserve">
+    <value>Выйти на форму авторизации</value>
+  </data>
+  <data name="&gt;&gt;btnLogout.Name" xml:space="preserve">
+    <value>btnLogout</value>
+  </data>
+  <data name="&gt;&gt;btnLogout.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnLogout.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnLogout.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>120, 120</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1711, 899</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        MHd2AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Учет заявок на обслуживание техники</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
