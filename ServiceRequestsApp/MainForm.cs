@@ -4,7 +4,6 @@ using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
 
 namespace ServiceRequestsApp
 {
@@ -195,8 +194,6 @@ namespace ServiceRequestsApp
 
         private int? GetSelectedRequestId()
         {
-
-
             if (dataGridViewRequests.CurrentRow == null)
                 return null;
 

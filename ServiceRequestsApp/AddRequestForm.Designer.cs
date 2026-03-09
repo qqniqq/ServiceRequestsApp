@@ -51,7 +51,6 @@
             // 
             resources.ApplyResources(this.txtFullName, "txtFullName");
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.Tag = "";
             // 
             // txtContact
             // 
@@ -66,6 +65,7 @@
             // 
             // comboPriority
             // 
+            resources.ApplyResources(this.comboPriority, "comboPriority");
             this.comboPriority.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPriority.FormattingEnabled = true;
@@ -73,7 +73,6 @@
             resources.GetString("comboPriority.Items"),
             resources.GetString("comboPriority.Items1"),
             resources.GetString("comboPriority.Items2")});
-            resources.ApplyResources(this.comboPriority, "comboPriority");
             this.comboPriority.Name = "comboPriority";
             // 
             // btnSave
@@ -99,7 +98,6 @@
             // 
             resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -123,6 +121,7 @@
             // 
             // comboDepartment
             // 
+            resources.ApplyResources(this.comboDepartment, "comboDepartment");
             this.comboDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDepartment.FormattingEnabled = true;
@@ -135,7 +134,6 @@
             resources.GetString("comboDepartment.Items5"),
             resources.GetString("comboDepartment.Items6"),
             resources.GetString("comboDepartment.Items7")});
-            resources.ApplyResources(this.comboDepartment, "comboDepartment");
             this.comboDepartment.Name = "comboDepartment";
             this.comboDepartment.SelectedIndexChanged += new System.EventHandler(this.comboDepartment_SelectedIndexChanged);
             // 
@@ -146,6 +144,7 @@
             // 
             // comboProblemType
             // 
+            resources.ApplyResources(this.comboProblemType, "comboProblemType");
             this.comboProblemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboProblemType.FormattingEnabled = true;
             this.comboProblemType.Items.AddRange(new object[] {
@@ -156,19 +155,17 @@
             resources.GetString("comboProblemType.Items4"),
             resources.GetString("comboProblemType.Items5"),
             resources.GetString("comboProblemType.Items6")});
-            resources.ApplyResources(this.comboProblemType, "comboProblemType");
             this.comboProblemType.Name = "comboProblemType";
-            this.comboProblemType.SelectedIndexChanged += new System.EventHandler(this.comboProblemType_SelectedIndexChanged);
             // 
             // comboSpecialist
             // 
+            resources.ApplyResources(this.comboSpecialist, "comboSpecialist");
             this.comboSpecialist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSpecialist.FormattingEnabled = true;
             this.comboSpecialist.Items.AddRange(new object[] {
             resources.GetString("comboSpecialist.Items"),
             resources.GetString("comboSpecialist.Items1"),
             resources.GetString("comboSpecialist.Items2")});
-            resources.ApplyResources(this.comboSpecialist, "comboSpecialist");
             this.comboSpecialist.Name = "comboSpecialist";
             // 
             // btnCancel
@@ -190,6 +187,7 @@
             // 
             // AddRequestForm
             // 
+            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
@@ -211,8 +209,8 @@
             this.Controls.Add(this.txtFullName);
             this.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "AddRequestForm";
-            this.Load += new System.EventHandler(this.AddRequestForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
