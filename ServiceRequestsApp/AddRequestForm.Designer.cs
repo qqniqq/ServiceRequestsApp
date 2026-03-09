@@ -66,7 +66,6 @@
             // 
             // comboPriority
             // 
-            resources.ApplyResources(this.comboPriority, "comboPriority");
             this.comboPriority.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboPriority.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboPriority.FormattingEnabled = true;
@@ -74,17 +73,18 @@
             resources.GetString("comboPriority.Items"),
             resources.GetString("comboPriority.Items1"),
             resources.GetString("comboPriority.Items2")});
+            resources.ApplyResources(this.comboPriority, "comboPriority");
             this.comboPriority.Name = "comboPriority";
             // 
             // btnSave
             // 
-            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(236)))));
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(92)))), ((int)(((byte)(193)))));
             this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(97)))), ((int)(((byte)(206)))));
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
             this.btnSave.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -121,7 +121,6 @@
             // 
             // comboDepartment
             // 
-            resources.ApplyResources(this.comboDepartment, "comboDepartment");
             this.comboDepartment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.comboDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboDepartment.FormattingEnabled = true;
@@ -134,6 +133,7 @@
             resources.GetString("comboDepartment.Items5"),
             resources.GetString("comboDepartment.Items6"),
             resources.GetString("comboDepartment.Items7")});
+            resources.ApplyResources(this.comboDepartment, "comboDepartment");
             this.comboDepartment.Name = "comboDepartment";
             this.comboDepartment.SelectedIndexChanged += new System.EventHandler(this.comboDepartment_SelectedIndexChanged);
             // 
@@ -144,7 +144,6 @@
             // 
             // comboProblemType
             // 
-            resources.ApplyResources(this.comboProblemType, "comboProblemType");
             this.comboProblemType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboProblemType.FormattingEnabled = true;
             this.comboProblemType.Items.AddRange(new object[] {
@@ -155,37 +154,38 @@
             resources.GetString("comboProblemType.Items4"),
             resources.GetString("comboProblemType.Items5"),
             resources.GetString("comboProblemType.Items6")});
+            resources.ApplyResources(this.comboProblemType, "comboProblemType");
             this.comboProblemType.Name = "comboProblemType";
             // 
             // comboSpecialist
             // 
-            resources.ApplyResources(this.comboSpecialist, "comboSpecialist");
             this.comboSpecialist.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboSpecialist.FormattingEnabled = true;
             this.comboSpecialist.Items.AddRange(new object[] {
             resources.GetString("comboSpecialist.Items"),
             resources.GetString("comboSpecialist.Items1"),
             resources.GetString("comboSpecialist.Items2")});
+            resources.ApplyResources(this.comboSpecialist, "comboSpecialist");
             this.comboSpecialist.Name = "comboSpecialist";
             // 
             // btnCancel
             // 
-            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BackColor = System.Drawing.Color.Firebrick;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(193)))), ((int)(((byte)(207)))));
             this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(246)))));
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.btnCancel.ForeColor = System.Drawing.Color.White;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // AddRequestForm
             // 
-            resources.ApplyResources(this, "$this");
             this.AllowDrop = true;
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            resources.ApplyResources(this, "$this");
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.comboSpecialist);

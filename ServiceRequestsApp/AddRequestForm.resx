@@ -118,240 +118,63 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>492, 497</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;comboProblemType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>161, 13</value>
-  </data>
-  <data name="comboPriority.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 30</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
-  </data>
-  <data name="comboProblemType.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="txtContact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 30</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboSpecialist.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="comboProblemType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 213</value>
-  </data>
-  <data name="txtFullName.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 305</value>
-  </data>
-  <data name="comboPriority.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;comboDepartment.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="comboDepartment.Items6" xml:space="preserve">
-    <value>отдел кадров</value>
-  </data>
-  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;button1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtContact.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 154</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="comboDepartment.Items5" xml:space="preserve">
-    <value>бухгалтерия</value>
-  </data>
-  <data name="comboSpecialist.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 394</value>
-  </data>
-  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;comboProblemType.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="comboSpecialist.Items1" xml:space="preserve">
-    <value>Петров В.В.</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>ФИО сотрудника</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>AddRequestForm</value>
-  </data>
-  <data name="comboSpecialist.Items2" xml:space="preserve">
-    <value>Сидоров С.С.</value>
-  </data>
-  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;txtFullName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;txtFullName.Name" xml:space="preserve">
-    <value>txtFullName</value>
-  </data>
-  <data name="comboSpecialist.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="txtContact.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>151, 129</value>
-  </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Контактные данные</value>
-  </data>
-  <data name="&gt;&gt;comboPriority.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label7.Text" xml:space="preserve">
-    <value>Ответственный специалист</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="&gt;&gt;txtFullName.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="comboDepartment.Items4" xml:space="preserve">
-    <value>поликлиника</value>
-  </data>
-  <data name="comboPriority.Items" xml:space="preserve">
-    <value>Низкий</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="txtFullName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>264, 13</value>
   </data>
   <data name="txtFullName.Size" type="System.Drawing.Size, System.Drawing">
     <value>174, 30</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="txtFullName.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
-  <data name="txtFullName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>143, 38</value>
+  <data name="&gt;&gt;txtFullName.Name" xml:space="preserve">
+    <value>txtFullName</value>
   </data>
-  <data name="&gt;&gt;comboDepartment.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Добавление заявки</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Сохранить</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="comboPriority.Items1" xml:space="preserve">
-    <value>Средний</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Times New Roman, 12pt</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;comboSpecialist.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;comboSpecialist.Name" xml:space="preserve">
-    <value>comboSpecialist</value>
-  </data>
-  <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+  <data name="&gt;&gt;txtFullName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtFullName.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
+  <data name="&gt;&gt;txtFullName.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
-    <value>btnSave</value>
+  <data name="txtContact.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 92</value>
+  </data>
+  <data name="txtContact.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 30</value>
+  </data>
+  <data name="txtContact.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtContact.Name" xml:space="preserve">
+    <value>txtContact</value>
+  </data>
+  <data name="&gt;&gt;txtContact.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtContact.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;txtContact.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 167</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
     <value>177, 30</value>
   </data>
-  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Name" xml:space="preserve">
+    <value>txtDescription</value>
+  </data>
+  <data name="&gt;&gt;txtDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;txtDescription.Parent" xml:space="preserve">
     <value>$this</value>
@@ -359,257 +182,453 @@
   <data name="&gt;&gt;txtDescription.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <data name="comboPriority.Items" xml:space="preserve">
+    <value>Низкий</value>
+  </data>
+  <data name="comboPriority.Items1" xml:space="preserve">
+    <value>Средний</value>
+  </data>
+  <data name="comboPriority.Items2" xml:space="preserve">
+    <value>Высокий</value>
+  </data>
+  <data name="comboPriority.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 203</value>
+  </data>
+  <data name="comboPriority.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 30</value>
+  </data>
+  <data name="comboPriority.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;comboPriority.Name" xml:space="preserve">
+    <value>comboPriority</value>
+  </data>
+  <data name="&gt;&gt;comboPriority.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboPriority.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboPriority.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 279</value>
+  </data>
+  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 65</value>
+  </data>
+  <data name="btnSave.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="btnSave.Text" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 13</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ФИО сотрудника</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 51</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>139, 22</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Подразделение</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 92</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 22</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Контактные данные</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>71, 136</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>178, 22</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Тип неисправности</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>63, 170</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 22</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Описание проблемы</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 206</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>164, 22</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Приоритет заявки</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="comboDepartment.Items" xml:space="preserve">
+    <value>администрация</value>
+  </data>
+  <data name="comboDepartment.Items1" xml:space="preserve">
+    <value>приёмное отделение</value>
+  </data>
+  <data name="comboDepartment.Items2" xml:space="preserve">
+    <value>хирургическое отделение</value>
+  </data>
+  <data name="comboDepartment.Items3" xml:space="preserve">
+    <value>терапевтическое отделение</value>
+  </data>
+  <data name="comboDepartment.Items4" xml:space="preserve">
+    <value>поликлиника</value>
+  </data>
+  <data name="comboDepartment.Items5" xml:space="preserve">
+    <value>бухгалтерия</value>
+  </data>
+  <data name="comboDepartment.Items6" xml:space="preserve">
+    <value>отдел кадров</value>
+  </data>
+  <data name="comboDepartment.Items7" xml:space="preserve">
+    <value>IT-отдел</value>
+  </data>
+  <data name="comboDepartment.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 48</value>
+  </data>
+  <data name="comboDepartment.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 30</value>
+  </data>
+  <data name="comboDepartment.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;comboDepartment.Name" xml:space="preserve">
+    <value>comboDepartment</value>
+  </data>
+  <data name="&gt;&gt;comboDepartment.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboDepartment.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;comboDepartment.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;label5.Name" xml:space="preserve">
-    <value>label5</value>
-  </data>
-  <data name="comboPriority.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 330</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="label6.AutoSize" type="System.Boolean, mscorlib">
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
-  </data>
-  <data name="comboDepartment.Items" xml:space="preserve">
-    <value>администрация</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 427</value>
-  </data>
-  <data name="comboSpecialist.Items" xml:space="preserve">
-    <value>Каменский К.К.</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>139, 187</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
-  </data>
-  <data name="&gt;&gt;comboProblemType.Name" xml:space="preserve">
-    <value>comboProblemType</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;comboPriority.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboProblemType.Parent" xml:space="preserve">
-    <value>$this</value>
   </data>
   <data name="label7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>136, 369</value>
-  </data>
-  <data name="comboDepartment.Items7" xml:space="preserve">
-    <value>IT-отдел</value>
-  </data>
-  <data name="&gt;&gt;label7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;button1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
-    <value>btnCancel</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
-  <data name="comboDepartment.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>163, 71</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>141, 247</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;comboPriority.Name" xml:space="preserve">
-    <value>comboPriority</value>
-  </data>
-  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="comboProblemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 30</value>
-  </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 22</value>
-  </data>
-  <data name="comboProblemType.Items" xml:space="preserve">
-    <value>Не включается компьютер</value>
-  </data>
-  <data name="comboDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>172, 30</value>
-  </data>
-  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Center</value>
-  </data>
-  <data name="&gt;&gt;label7.Name" xml:space="preserve">
-    <value>label7</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="&gt;&gt;comboPriority.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;txtContact.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Подразделение</value>
-  </data>
-  <data name="label7.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="btnSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>121, 47</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>Приоритет заявки</value>
-  </data>
-  <data name="&gt;&gt;button1.Name" xml:space="preserve">
-    <value>button1</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>Тип неисправности</value>
-  </data>
-  <data name="comboDepartment.Items3" xml:space="preserve">
-    <value>терапевтическое отделение</value>
-  </data>
-  <data name="comboDepartment.Items2" xml:space="preserve">
-    <value>хирургическое отделение</value>
-  </data>
-  <data name="comboDepartment.Location" type="System.Drawing.Point, System.Drawing">
-    <value>145, 96</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
-  </data>
-  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtDescription.Location" type="System.Drawing.Point, System.Drawing">
-    <value>140, 272</value>
-  </data>
-  <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>165, 429</value>
-  </data>
-  <data name="comboDepartment.Items1" xml:space="preserve">
-    <value>приёмное отделение</value>
-  </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="comboSpecialist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>177, 30</value>
-  </data>
-  <data name="&gt;&gt;txtContact.Name" xml:space="preserve">
-    <value>txtContact</value>
-  </data>
-  <data name="comboPriority.Items2" xml:space="preserve">
-    <value>Высокий</value>
-  </data>
-  <data name="button1.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+    <value>12, 242</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
     <value>246, 22</value>
   </data>
-  <data name="button1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>240, 427</value>
+  <data name="label7.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>Описание проблемы</value>
+  <data name="label7.Text" xml:space="preserve">
+    <value>Ответственный специалист</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;label7.Name" xml:space="preserve">
+    <value>label7</value>
   </data>
-  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+  <data name="&gt;&gt;label7.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label7.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;comboSpecialist.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
-  <data name="comboProblemType.Items5" xml:space="preserve">
-    <value>Заправить катридж</value>
-  </data>
-  <data name="comboProblemType.Items4" xml:space="preserve">
-    <value>Не работает принтер</value>
-  </data>
-  <data name="comboProblemType.Items6" xml:space="preserve">
-    <value>Другое</value>
+  <data name="comboProblemType.Items" xml:space="preserve">
+    <value>Не включается компьютер</value>
   </data>
   <data name="comboProblemType.Items1" xml:space="preserve">
     <value>Проблемы с интернетом</value>
   </data>
-  <data name="comboProblemType.Items3" xml:space="preserve">
-    <value>Вирусы</value>
-  </data>
   <data name="comboProblemType.Items2" xml:space="preserve">
     <value>Не работает программа</value>
   </data>
-  <data name="&gt;&gt;button1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboProblemType.Items3" xml:space="preserve">
+    <value>Вирусы</value>
   </data>
-  <data name="&gt;&gt;txtContact.Parent" xml:space="preserve">
+  <data name="comboProblemType.Items4" xml:space="preserve">
+    <value>Не работает принтер</value>
+  </data>
+  <data name="comboProblemType.Items5" xml:space="preserve">
+    <value>Заправить катридж</value>
+  </data>
+  <data name="comboProblemType.Items6" xml:space="preserve">
+    <value>Другое</value>
+  </data>
+  <data name="comboProblemType.Location" type="System.Drawing.Point, System.Drawing">
+    <value>268, 128</value>
+  </data>
+  <data name="comboProblemType.Size" type="System.Drawing.Size, System.Drawing">
+    <value>172, 30</value>
+  </data>
+  <data name="comboProblemType.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;comboProblemType.Name" xml:space="preserve">
+    <value>comboProblemType</value>
+  </data>
+  <data name="&gt;&gt;comboProblemType.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboProblemType.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="&gt;&gt;txtDescription.Name" xml:space="preserve">
-    <value>txtDescription</value>
+  <data name="&gt;&gt;comboProblemType.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboSpecialist.Items" xml:space="preserve">
+    <value>Каменский К.К.</value>
   </data>
-  <data name="&gt;&gt;comboDepartment.Name" xml:space="preserve">
-    <value>comboDepartment</value>
+  <data name="comboSpecialist.Items1" xml:space="preserve">
+    <value>Петров В.В.</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="comboSpecialist.Items2" xml:space="preserve">
+    <value>Сидоров С.С.</value>
   </data>
-  <data name="&gt;&gt;txtContact.ZOrder" xml:space="preserve">
-    <value>14</value>
+  <data name="comboSpecialist.Location" type="System.Drawing.Point, System.Drawing">
+    <value>266, 239</value>
   </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
+  <data name="comboSpecialist.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 30</value>
+  </data>
+  <data name="comboSpecialist.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;comboSpecialist.Name" xml:space="preserve">
+    <value>comboSpecialist</value>
+  </data>
+  <data name="&gt;&gt;comboSpecialist.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;comboSpecialist.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;comboSpecialist.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>295, 341</value>
+  </data>
+  <data name="btnCancel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>121, 65</value>
+  </data>
+  <data name="btnCancel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnCancel.Text" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Name" xml:space="preserve">
+    <value>btnCancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnCancel.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>asa-TZ</value>
-  </metadata>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Center</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>723, 406</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Times New Roman, 12pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        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
+        MHd2AAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Добавление заявки</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>AddRequestForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
