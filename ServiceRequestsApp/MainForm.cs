@@ -20,7 +20,7 @@ namespace ServiceRequestsApp
 
             currentUser = fullName;
             currentRole = role;
-            lblUser.Text = $"Пользователь: {currentUser} ({currentRole})";
+            lblUser.Text = $"{currentUser} ({currentRole})";
 
             // В боковом меню оставляем только реально работающий раздел, чтобы не путать пользователя.
             labelMenuDashboard.Visible = false;
