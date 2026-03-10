@@ -223,6 +223,7 @@
             this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "AddRequestForm";
+            this.Shown += new System.EventHandler(this.AddRequestForm_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

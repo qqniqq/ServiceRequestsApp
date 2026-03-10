@@ -11,36 +11,7 @@ namespace ServiceRequestsApp
         {
             InitializeComponent();
 
-            label1.Visible = false;
-            label2.Visible = false;
-            label3.Visible = false;
-            label4.Visible = false;
-            label5.Visible = false;
-            label6.Visible = false;
-            label7.Visible = false;
-
-            SetupPlaceholderTextBox(txtFullName, "ФИО сотрудника");
-            SetupPlaceholderTextBox(txtContact, "Контактные данные");
-            SetupPlaceholderTextBox(txtDescription, "Описание проблемы");
-
-            comboProblemType.Items.Clear();
-            comboProblemType.Items.AddRange(new object[]
-            {
-                "Тип неисправности",
-                "ПК врача",
-                "Принтер",
-                "МФУ",
-                "Сеть",
-                "Телефония",
-                "Медицинская информационная система",
-                "Программное обеспечение",
-                "Другое"
-            });
-
-            SetupPlaceholderComboBox(comboDepartment, "Подразделение");
-            SetupPlaceholderComboBox(comboPriority, "Приоритет заявки");
-            SetupPlaceholderComboBox(comboProblemType, "Тип неисправности");
-            SetupPlaceholderComboBox(comboSpecialist, "Ответственный специалист");
+            
         }
 
         private void SetupPlaceholderTextBox(TextBox textBox, string placeholder)
@@ -174,6 +145,40 @@ namespace ServiceRequestsApp
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void AddRequestForm_Shown(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+
+            SetupPlaceholderTextBox(txtFullName, "ФИО сотрудника");
+            SetupPlaceholderTextBox(txtContact, "Контактные данные");
+            SetupPlaceholderTextBox(txtDescription, "Описание проблемы");
+
+            comboProblemType.Items.Clear();
+            comboProblemType.Items.AddRange(new object[]
+            {
+                "Тип неисправности",
+                "ПК врача",
+                "Принтер",
+                "МФУ",
+                "Сеть",
+                "Телефония",
+                "Медицинская информационная система",
+                "Программное обеспечение",
+                "Другое"
+            });
+
+            SetupPlaceholderComboBox(comboDepartment, "Подразделение");
+            SetupPlaceholderComboBox(comboPriority, "Приоритет заявки");
+            SetupPlaceholderComboBox(comboProblemType, "Тип неисправности");
+            SetupPlaceholderComboBox(comboSpecialist, "Ответственный специалист");
         }
     }
 }

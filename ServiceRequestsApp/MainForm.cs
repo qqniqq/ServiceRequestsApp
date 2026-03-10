@@ -454,5 +454,10 @@ WHERE DateCreated >= @FromDate AND DateCreated <= @ToDate";
         private void btnSearch_Click(object sender, EventArgs e) { }
         private void MainForm_Load(object sender, EventArgs e) { }
         private void comboStatus_SelectedIndexChanged(object sender, EventArgs e) { }
+
+        private void comboStatus_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
