@@ -336,17 +336,17 @@
             // comboStatus
             // 
             this.comboStatus.BackColor = System.Drawing.Color.White;
-            this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown;
+            this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboStatus.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
             "Новая",
             "В работе",
             "Выполнена"});
-            this.comboStatus.Location = new System.Drawing.Point(828, 77);
+            this.comboStatus.Location = new System.Drawing.Point(827, 106);
             this.comboStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboStatus.Name = "comboStatus";
-            this.comboStatus.Size = new System.Drawing.Size(157, 25);
+            this.comboStatus.Size = new System.Drawing.Size(158, 25);
             this.comboStatus.TabIndex = 9;
             // 
             // btnUpdateStatus
