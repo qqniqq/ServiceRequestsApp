@@ -74,7 +74,7 @@ namespace ServiceRequestsApp
                 string checkRequests = "SELECT COUNT(*) FROM Requests";
                 long requestsCount = (long)new SQLiteCommand(checkRequests, connection).ExecuteScalar();
 
-                if (requestsCount < 10)
+                if (requestsCount == 0)
                 {
                     string insertRequests = @"
     INSERT INTO Requests (FullName, Department, Contact, DateCreated, ProblemType, Description, Priority, Specialist, Status)

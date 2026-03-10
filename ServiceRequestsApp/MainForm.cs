@@ -126,25 +126,22 @@ namespace ServiceRequestsApp
             dataGridViewRequests.Columns["Id"].HeaderText = "№";
             dataGridViewRequests.Columns["FullName"].HeaderText = "ФИО";
             dataGridViewRequests.Columns["Department"].HeaderText = "Подразделение";
-            dataGridViewRequests.Columns["Contact"].HeaderText = "Контакты";
             dataGridViewRequests.Columns["DateCreated"].HeaderText = "Дата и время";
-            dataGridViewRequests.Columns["ProblemType"].HeaderText = "Тип неисправности";
-            dataGridViewRequests.Columns["Description"].HeaderText = "Описание";
             dataGridViewRequests.Columns["Priority"].HeaderText = "Приоритет";
-            dataGridViewRequests.Columns["Specialist"].HeaderText = "Специалист";
             dataGridViewRequests.Columns["Status"].HeaderText = "Статус";
 
-            // Веса подобраны так, чтобы все колонки помещались на экране без скрытия данных.
-            dataGridViewRequests.Columns["Id"].FillWeight = 6;
-            dataGridViewRequests.Columns["FullName"].FillWeight = 14;
-            dataGridViewRequests.Columns["Department"].FillWeight = 12;
-            dataGridViewRequests.Columns["Contact"].FillWeight = 10;
-            dataGridViewRequests.Columns["DateCreated"].FillWeight = 11;
-            dataGridViewRequests.Columns["ProblemType"].FillWeight = 10;
-            dataGridViewRequests.Columns["Description"].FillWeight = 20;
-            dataGridViewRequests.Columns["Priority"].FillWeight = 7;
-            dataGridViewRequests.Columns["Specialist"].FillWeight = 10;
-            dataGridViewRequests.Columns["Status"].FillWeight = 10;
+            // В таблице оставляем только основные поля, полные данные доступны по кнопке "Детали".
+            dataGridViewRequests.Columns["Contact"].Visible = false;
+            dataGridViewRequests.Columns["ProblemType"].Visible = false;
+            dataGridViewRequests.Columns["Description"].Visible = false;
+            dataGridViewRequests.Columns["Specialist"].Visible = false;
+
+            dataGridViewRequests.Columns["Id"].FillWeight = 8;
+            dataGridViewRequests.Columns["FullName"].FillWeight = 24;
+            dataGridViewRequests.Columns["Department"].FillWeight = 20;
+            dataGridViewRequests.Columns["DateCreated"].FillWeight = 20;
+            dataGridViewRequests.Columns["Priority"].FillWeight = 12;
+            dataGridViewRequests.Columns["Status"].FillWeight = 16;
 
             UpdateCards(table);
         }
