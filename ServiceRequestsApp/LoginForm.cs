@@ -9,6 +9,9 @@ namespace ServiceRequestsApp
     public partial class LoginForm : Form
     {
         private const string connectionString = "Data Source=requests.db";
+        private const int maxFailedAttempts = 5;
+        private static int failedAttempts;
+        private static DateTime? lockoutUntil;
         public LoginForm()
         {
             InitializeComponent();
@@ -53,6 +56,13 @@ namespace ServiceRequestsApp
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            if (lockoutUntil.HasValue && DateTime.Now < lockoutUntil.Value)
+            {
+                TimeSpan remaining = lockoutUntil.Value - DateTime.Now;
+                MessageBox.Show($"Вход временно заблокирован. Повторите попытку через {Math.Ceiling(remaining.TotalMinutes)} мин.");
+                return;
+            }
+
             string login = txtLogin.ForeColor == System.Drawing.Color.Gray ? string.Empty : txtLogin.Text.Trim();
             string password = txtPassword.ForeColor == System.Drawing.Color.Gray ? string.Empty : txtPassword.Text;
 
@@ -77,10 +87,14 @@ namespace ServiceRequestsApp
                 {
                     string storedPassword = reader["Password"].ToString();
                     string inputHash = ComputeSha256(password);
-                    bool isPasswordValid = storedPassword == inputHash || storedPassword == password;
+                    bool isPasswordValid = storedPassword == inputHash;
 
                     if (isPasswordValid)
                     {
+                        failedAttempts = 0;
+                        lockoutUntil = null;
+                        LogLoginAttempt(login, true, "Успешный вход");
+
                         string fullName = reader["FullName"].ToString();
                         string role = reader["Role"].ToString();
                         MainForm main = new MainForm(fullName, role);
@@ -89,15 +103,49 @@ namespace ServiceRequestsApp
                     }
                     else
                     {
-                        MessageBox.Show("Неверный логин или пароль");
+                        HandleFailedLogin(login, "Некорректный пароль");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Неверный логин или пароль");
+                    HandleFailedLogin(login, "Пользователь не найден");
                 }
             }
         }
+
+        private void HandleFailedLogin(string login, string reason)
+        {
+            LogLoginAttempt(login, false, reason);
+            failedAttempts++;
+            if (failedAttempts >= maxFailedAttempts)
+            {
+                lockoutUntil = DateTime.Now.AddMinutes(10);
+                failedAttempts = 0;
+                MessageBox.Show("Превышено количество попыток входа. Учетная запись временно заблокирована на 10 минут.");
+                return;
+            }
+
+            int remaining = maxFailedAttempts - failedAttempts;
+            MessageBox.Show($"Неверный логин или пароль. Осталось попыток: {remaining}.");
+        }
+
+        private void LogLoginAttempt(string login, bool isSuccess, string details)
+        {
+            using (var connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+                string sql = "INSERT INTO LoginAudit (Login, AttemptDate, IsSuccess, Details) VALUES (@Login, @AttemptDate, @IsSuccess, @Details)";
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Login", login);
+                    cmd.Parameters.AddWithValue("@AttemptDate", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+                    cmd.Parameters.AddWithValue("@IsSuccess", isSuccess ? 1 : 0);
+                    cmd.Parameters.AddWithValue("@Details", details);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+        }
+
         private static string ComputeSha256(string value)
         {
             using (SHA256 sha = SHA256.Create())

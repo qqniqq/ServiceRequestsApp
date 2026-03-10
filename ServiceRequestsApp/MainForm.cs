@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.SQLite;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
 using System.Windows.Forms;
 
 namespace ServiceRequestsApp
@@ -13,6 +14,9 @@ namespace ServiceRequestsApp
 
         private readonly string currentUser;
         private readonly string currentRole;
+        private readonly ComboBox comboFilterStatus = new ComboBox();
+        private readonly ComboBox comboFilterPriority = new ComboBox();
+        private readonly ComboBox comboFilterSpecialist = new ComboBox();
 
         public MainForm(string fullName, string role)
         {
@@ -33,8 +37,35 @@ namespace ServiceRequestsApp
             dateTo.Value = DateTime.Today;
 
             ApplyRolePermissions();
+            InitializeFilters();
             ConfigureTable();
             LoadRequests();
+        }
+
+        private void InitializeFilters()
+        {
+            ConfigureFilterCombo(comboFilterStatus, 640, "Статус: все", new[] { "Новая", "В работе", "Выполнена" });
+            ConfigureFilterCombo(comboFilterPriority, 805, "Приоритет: все", new[] { "Высокий", "Средний", "Низкий" });
+            ConfigureFilterCombo(comboFilterSpecialist, 970, "Специалист: все", new[] { "Петров А.А.", "Сидоров И.В." });
+
+            Controls.Add(comboFilterStatus);
+            Controls.Add(comboFilterPriority);
+            Controls.Add(comboFilterSpecialist);
+        }
+
+        private void ConfigureFilterCombo(ComboBox combo, int x, string allLabel, string[] values)
+        {
+            combo.DropDownStyle = ComboBoxStyle.DropDownList;
+            combo.Width = 155;
+            combo.Height = 25;
+            combo.Left = x;
+            combo.Top = 137;
+            combo.Font = new Font("Segoe UI", 9F, FontStyle.Regular);
+            combo.Items.Clear();
+            combo.Items.Add(allLabel);
+            combo.Items.AddRange(values);
+            combo.SelectedIndex = 0;
+            combo.SelectedIndexChanged += (s, e) => LoadRequests();
         }
 
         private void ApplyRolePermissions()
@@ -102,12 +133,41 @@ namespace ServiceRequestsApp
 
         private void LoadRequests()
         {
-            using (var adapter = new SQLiteDataAdapter("SELECT * FROM Requests ORDER BY Id DESC", connectionString))
+            using (var connection = new SQLiteConnection(connectionString))
             {
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                BindTable(table);
+                connection.Open();
+                string sql = @"SELECT * FROM Requests
+WHERE (@Search = '' OR FullName LIKE @SearchLike OR Department LIKE @SearchLike OR ProblemType LIKE @SearchLike OR Description LIKE @SearchLike)
+AND (@Status = '' OR Status = @Status)
+AND (@Priority = '' OR Priority = @Priority)
+AND (@Specialist = '' OR Specialist = @Specialist)
+ORDER BY Id DESC";
+
+                using (var cmd = new SQLiteCommand(sql, connection))
+                {
+                    string search = txtSearch.Text.Trim();
+                    cmd.Parameters.AddWithValue("@Search", search);
+                    cmd.Parameters.AddWithValue("@SearchLike", "%" + search + "%");
+                    cmd.Parameters.AddWithValue("@Status", GetFilterValue(comboFilterStatus));
+                    cmd.Parameters.AddWithValue("@Priority", GetFilterValue(comboFilterPriority));
+                    cmd.Parameters.AddWithValue("@Specialist", GetFilterValue(comboFilterSpecialist));
+
+                    using (var adapter = new SQLiteDataAdapter(cmd))
+                    {
+                        DataTable table = new DataTable();
+                        adapter.Fill(table);
+                        BindTable(table);
+                    }
+                }
             }
+        }
+
+        private string GetFilterValue(ComboBox combo)
+        {
+            if (combo == null || combo.SelectedIndex <= 0)
+                return string.Empty;
+
+            return combo.Text;
         }
 
         private void BindTable(DataTable table)
@@ -174,19 +234,6 @@ namespace ServiceRequestsApp
 
             // После закрытия формы перечитываем данные из БД.
             LoadRequests();
-        }
-
-        private void SearchRequests(string searchText)
-        {
-            using (var adapter = new SQLiteDataAdapter(
-                "SELECT * FROM Requests WHERE FullName LIKE @text OR Department LIKE @text OR ProblemType LIKE @text OR Description LIKE @text ORDER BY Id DESC",
-                connectionString))
-            {
-                adapter.SelectCommand.Parameters.AddWithValue("@text", "%" + searchText + "%");
-                DataTable table = new DataTable();
-                adapter.Fill(table);
-                BindTable(table);
-            }
         }
 
         private int? GetSelectedRequestId()
@@ -288,9 +335,14 @@ namespace ServiceRequestsApp
             }
 
             string currentDescription = dataGridViewRequests.CurrentRow.Cells["Description"].Value?.ToString() ?? string.Empty;
+            string currentSpecialist = dataGridViewRequests.CurrentRow.Cells["Specialist"].Value?.ToString() ?? string.Empty;
             string newDescription = PromptForText("Правка заявки", "Введите новое описание:", currentDescription);
 
             if (newDescription == null)
+                return;
+
+            string newSpecialist = PromptForSpecialist(currentSpecialist);
+            if (newSpecialist == null)
                 return;
 
             if (newDescription.Trim().Length < 10)
@@ -302,14 +354,15 @@ namespace ServiceRequestsApp
             using (var connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
-                SQLiteCommand cmd = new SQLiteCommand("UPDATE Requests SET Description = @Description WHERE Id = @Id", connection);
+                SQLiteCommand cmd = new SQLiteCommand("UPDATE Requests SET Description = @Description, Specialist = @Specialist WHERE Id = @Id", connection);
                 cmd.Parameters.AddWithValue("@Description", newDescription.Trim());
+                cmd.Parameters.AddWithValue("@Specialist", newSpecialist);
                 cmd.Parameters.AddWithValue("@Id", selectedId.Value);
                 cmd.ExecuteNonQuery();
             }
 
             LoadRequests();
-            MessageBox.Show("Описание заявки обновлено");
+            MessageBox.Show("Заявка обновлена");
         }
 
         private void btnDetails_Click(object sender, EventArgs e)
@@ -396,6 +449,84 @@ namespace ServiceRequestsApp
             }
         }
 
+        private string PromptForSpecialist(string currentSpecialist)
+        {
+            using (Form prompt = new Form())
+            {
+                prompt.Text = "Переназначение специалиста";
+                prompt.Width = 430;
+                prompt.Height = 170;
+                prompt.StartPosition = FormStartPosition.CenterParent;
+                prompt.FormBorderStyle = FormBorderStyle.FixedDialog;
+                prompt.MinimizeBox = false;
+                prompt.MaximizeBox = false;
+
+                Label textLabel = new Label
+                {
+                    Left = 12,
+                    Top = 16,
+                    Width = 380,
+                    Text = "Выберите нового ответственного специалиста:"
+                };
+
+                ComboBox specialistCombo = new ComboBox
+                {
+                    Left = 12,
+                    Top = 45,
+                    Width = 390,
+                    DropDownStyle = ComboBoxStyle.DropDownList
+                };
+
+                specialistCombo.Items.AddRange(new object[] { "Петров А.А.", "Сидоров И.В." });
+                int currentIndex = specialistCombo.Items.IndexOf(currentSpecialist);
+                specialistCombo.SelectedIndex = currentIndex >= 0 ? currentIndex : 0;
+
+                Button confirmation = new Button
+                {
+                    Text = "Сохранить",
+                    DialogResult = DialogResult.OK,
+                    Left = 225,
+                    Width = 85,
+                    Top = 80
+                };
+
+                Button cancel = new Button
+                {
+                    Text = "Отмена",
+                    DialogResult = DialogResult.Cancel,
+                    Left = 318,
+                    Width = 85,
+                    Top = 80
+                };
+
+                prompt.Controls.Add(textLabel);
+                prompt.Controls.Add(specialistCombo);
+                prompt.Controls.Add(confirmation);
+                prompt.Controls.Add(cancel);
+
+                prompt.AcceptButton = confirmation;
+                prompt.CancelButton = cancel;
+
+                return prompt.ShowDialog(this) == DialogResult.OK ? specialistCombo.Text : null;
+            }
+        }
+
+        private void ExportReportToFile(string report)
+        {
+            using (SaveFileDialog dialog = new SaveFileDialog())
+            {
+                dialog.Filter = "Текстовый файл (*.txt)|*.txt";
+                dialog.Title = "Сохранить отчет";
+                dialog.FileName = $"report_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+
+                if (dialog.ShowDialog(this) != DialogResult.OK)
+                    return;
+
+                File.WriteAllText(dialog.FileName, report);
+                MessageBox.Show("Отчет успешно сохранен");
+            }
+        }
+
         private void btnLogout_Click(object sender, EventArgs e)
         {
             LoginForm login = new LoginForm();
@@ -405,7 +536,7 @@ namespace ServiceRequestsApp
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            SearchRequests(txtSearch.Text);
+            LoadRequests();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -446,6 +577,7 @@ WHERE DateCreated >= @FromDate AND DateCreated <= @ToDate";
                         $"Выполненные: {reader["DoneCount"]}";
 
                     MessageBox.Show(report, "Отчёт по заявкам");
+                    ExportReportToFile(report);
                 }
             }
         }

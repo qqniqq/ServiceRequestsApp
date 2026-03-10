@@ -47,6 +47,16 @@ namespace ServiceRequestsApp
                 )";
                 new SQLiteCommand(createUsers, connection).ExecuteNonQuery();
 
+                string createLoginAudit = @"
+                CREATE TABLE IF NOT EXISTS LoginAudit (
+                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    Login TEXT,
+                    AttemptDate TEXT,
+                    IsSuccess INTEGER,
+                    Details TEXT
+                )";
+                new SQLiteCommand(createLoginAudit, connection).ExecuteNonQuery();
+
                 string checkUsers = "SELECT COUNT(*) FROM Users";
                 long count = (long)new SQLiteCommand(checkUsers, connection).ExecuteScalar();
 
