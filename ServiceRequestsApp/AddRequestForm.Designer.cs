@@ -220,7 +220,7 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtContact);
             this.Controls.Add(this.txtFullName);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.DoubleBuffered = true;
             this.MaximizeBox = false;
             this.Name = "AddRequestForm";
             this.ResumeLayout(false);

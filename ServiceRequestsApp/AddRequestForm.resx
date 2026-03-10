@@ -212,6 +212,10 @@
   <data name="&gt;&gt;comboPriority.ZOrder" xml:space="preserve">
     <value>13</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="btnSave.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnSave.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 280</value>
   </data>
@@ -542,6 +546,9 @@
   <data name="&gt;&gt;comboSpecialist.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
+  <data name="btnCancel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="btnCancel.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 359</value>
   </data>
@@ -627,7 +634,6 @@
         FgAD//8A/wADAAs=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="labelPageTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
   </data>
@@ -635,13 +641,13 @@
     <value>True</value>
   </data>
   <data name="labelPageTitle.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 16pt, style=Bold</value>
+    <value>Times New Roman, 18pt, style=Bold</value>
   </data>
   <data name="labelPageTitle.Location" type="System.Drawing.Point, System.Drawing">
     <value>163, 45</value>
   </data>
   <data name="labelPageTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>226, 30</value>
+    <value>223, 26</value>
   </data>
   <data name="labelPageTitle.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -715,6 +721,9 @@
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
     <value>4, 4, 4, 4</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>IT HelpDesk</value>

@@ -82,7 +82,7 @@
             this.panelSidebar.Controls.Add(this.labelMenuDashboard);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
-            this.panelSidebar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSidebar.Margin = new System.Windows.Forms.Padding(2);
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(152, 702);
             this.panelSidebar.TabIndex = 0;
@@ -91,7 +91,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(142, 134);
             this.pictureBox1.TabIndex = 7;
@@ -148,19 +148,19 @@
             // labelMenuRequests
             // 
             this.labelMenuRequests.AutoSize = true;
-            this.labelMenuRequests.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.labelMenuRequests.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMenuRequests.ForeColor = System.Drawing.Color.White;
             this.labelMenuRequests.Location = new System.Drawing.Point(22, 223);
             this.labelMenuRequests.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelMenuRequests.Name = "labelMenuRequests";
-            this.labelMenuRequests.Size = new System.Drawing.Size(79, 19);
+            this.labelMenuRequests.Size = new System.Drawing.Size(80, 19);
             this.labelMenuRequests.TabIndex = 2;
             this.labelMenuRequests.Text = "📋 Заявки";
             // 
             // labelMenuDashboard
             // 
             this.labelMenuDashboard.AutoSize = true;
-            this.labelMenuDashboard.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.labelMenuDashboard.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelMenuDashboard.ForeColor = System.Drawing.Color.White;
             this.labelMenuDashboard.Location = new System.Drawing.Point(22, 204);
             this.labelMenuDashboard.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -176,7 +176,7 @@
             this.panelHeader.Controls.Add(this.labelPageTitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(152, 0);
-            this.panelHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelHeader.Margin = new System.Windows.Forms.Padding(2);
             this.panelHeader.Name = "panelHeader";
             this.panelHeader.Size = new System.Drawing.Size(1123, 58);
             this.panelHeader.TabIndex = 1;
@@ -185,33 +185,33 @@
             // 
             this.lblUser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblUser.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(102)))), ((int)(((byte)(122)))));
             this.lblUser.Location = new System.Drawing.Point(860, 15);
             this.lblUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(43, 15);
+            this.lblUser.Size = new System.Drawing.Size(45, 15);
             this.lblUser.TabIndex = 1;
             this.lblUser.Text = "lblUser";
             // 
             // labelPageTitle
             // 
             this.labelPageTitle.AutoSize = true;
-            this.labelPageTitle.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Bold);
+            this.labelPageTitle.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelPageTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(52)))), ((int)(((byte)(73)))));
             this.labelPageTitle.Location = new System.Drawing.Point(14, 15);
             this.labelPageTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPageTitle.Name = "labelPageTitle";
-            this.labelPageTitle.Size = new System.Drawing.Size(89, 30);
+            this.labelPageTitle.Size = new System.Drawing.Size(78, 24);
             this.labelPageTitle.TabIndex = 0;
             this.labelPageTitle.Text = "Заявки";
             // 
             // panelStatNew
             // 
-            this.panelStatNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(236)))));
+            this.panelStatNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelStatNew.Controls.Add(this.lblStatNew);
             this.panelStatNew.Location = new System.Drawing.Point(165, 67);
-            this.panelStatNew.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelStatNew.Margin = new System.Windows.Forms.Padding(2);
             this.panelStatNew.Name = "panelStatNew";
             this.panelStatNew.Size = new System.Drawing.Size(153, 48);
             this.panelStatNew.TabIndex = 2;
@@ -219,21 +219,21 @@
             // lblStatNew
             // 
             this.lblStatNew.AutoSize = true;
-            this.lblStatNew.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStatNew.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblStatNew.ForeColor = System.Drawing.Color.White;
             this.lblStatNew.Location = new System.Drawing.Point(9, 13);
             this.lblStatNew.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatNew.Name = "lblStatNew";
-            this.lblStatNew.Size = new System.Drawing.Size(80, 21);
+            this.lblStatNew.Size = new System.Drawing.Size(76, 19);
             this.lblStatNew.TabIndex = 0;
             this.lblStatNew.Text = "Новые: 0";
             // 
             // panelStatInWork
             // 
-            this.panelStatInWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(236)))));
+            this.panelStatInWork.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelStatInWork.Controls.Add(this.lblStatInWork);
             this.panelStatInWork.Location = new System.Drawing.Point(322, 67);
-            this.panelStatInWork.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelStatInWork.Margin = new System.Windows.Forms.Padding(2);
             this.panelStatInWork.Name = "panelStatInWork";
             this.panelStatInWork.Size = new System.Drawing.Size(153, 48);
             this.panelStatInWork.TabIndex = 3;
@@ -241,21 +241,21 @@
             // lblStatInWork
             // 
             this.lblStatInWork.AutoSize = true;
-            this.lblStatInWork.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStatInWork.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblStatInWork.ForeColor = System.Drawing.Color.White;
             this.lblStatInWork.Location = new System.Drawing.Point(14, 13);
             this.lblStatInWork.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatInWork.Name = "lblStatInWork";
-            this.lblStatInWork.Size = new System.Drawing.Size(96, 21);
+            this.lblStatInWork.Size = new System.Drawing.Size(89, 19);
             this.lblStatInWork.TabIndex = 0;
             this.lblStatInWork.Text = "В работе: 0";
             // 
             // panelStatDone
             // 
-            this.panelStatDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(112)))), ((int)(((byte)(236)))));
+            this.panelStatDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(130)))), ((int)(((byte)(230)))));
             this.panelStatDone.Controls.Add(this.lblStatDone);
             this.panelStatDone.Location = new System.Drawing.Point(480, 67);
-            this.panelStatDone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelStatDone.Margin = new System.Windows.Forms.Padding(2);
             this.panelStatDone.Name = "panelStatDone";
             this.panelStatDone.Size = new System.Drawing.Size(153, 48);
             this.panelStatDone.TabIndex = 4;
@@ -263,12 +263,12 @@
             // lblStatDone
             // 
             this.lblStatDone.AutoSize = true;
-            this.lblStatDone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lblStatDone.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblStatDone.ForeColor = System.Drawing.Color.White;
             this.lblStatDone.Location = new System.Drawing.Point(14, 13);
             this.lblStatDone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblStatDone.Name = "lblStatDone";
-            this.lblStatDone.Size = new System.Drawing.Size(119, 21);
+            this.lblStatDone.Size = new System.Drawing.Size(110, 19);
             this.lblStatDone.TabIndex = 0;
             this.lblStatDone.Text = "Выполнено: 0";
             // 
@@ -278,7 +278,7 @@
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtSearch.Location = new System.Drawing.Point(165, 137);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(468, 25);
             this.txtSearch.TabIndex = 5;
@@ -292,12 +292,12 @@
             this.btnAddRequest.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(97)))), ((int)(((byte)(206)))));
             this.btnAddRequest.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
             this.btnAddRequest.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRequest.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRequest.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnAddRequest.ForeColor = System.Drawing.Color.White;
-            this.btnAddRequest.Location = new System.Drawing.Point(670, 119);
-            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddRequest.Location = new System.Drawing.Point(652, 67);
+            this.btnAddRequest.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddRequest.Name = "btnAddRequest";
-            this.btnAddRequest.Size = new System.Drawing.Size(153, 42);
+            this.btnAddRequest.Size = new System.Drawing.Size(153, 47);
             this.btnAddRequest.TabIndex = 6;
             this.btnAddRequest.Text = "+ Новая заявка";
             this.btnAddRequest.UseVisualStyleBackColor = false;
@@ -313,7 +313,7 @@
             this.dataGridViewRequests.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewRequests.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(223)))), ((int)(((byte)(229)))), ((int)(((byte)(236)))));
             this.dataGridViewRequests.Location = new System.Drawing.Point(165, 172);
-            this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewRequests.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewRequests.Name = "dataGridViewRequests";
             this.dataGridViewRequests.ReadOnly = true;
             this.dataGridViewRequests.RowHeadersWidth = 51;
@@ -324,12 +324,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.5F);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(132)))), ((int)(((byte)(147)))));
-            this.label1.Location = new System.Drawing.Point(162, 118);
+            this.label1.Location = new System.Drawing.Point(169, 120);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(81, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "Поиск заявок";
             // 
@@ -337,15 +337,16 @@
             // 
             this.comboStatus.BackColor = System.Drawing.Color.White;
             this.comboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboStatus.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.comboStatus.FormattingEnabled = true;
             this.comboStatus.Items.AddRange(new object[] {
             "Новая",
             "В работе",
             "Выполнена"});
-            this.comboStatus.Location = new System.Drawing.Point(827, 91);
-            this.comboStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboStatus.Location = new System.Drawing.Point(827, 106);
+            this.comboStatus.Margin = new System.Windows.Forms.Padding(2);
             this.comboStatus.Name = "comboStatus";
-            this.comboStatus.Size = new System.Drawing.Size(158, 27);
+            this.comboStatus.Size = new System.Drawing.Size(158, 25);
             this.comboStatus.TabIndex = 9;
             // 
             // btnUpdateStatus
@@ -356,11 +357,12 @@
             this.btnUpdateStatus.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(97)))), ((int)(((byte)(206)))));
             this.btnUpdateStatus.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(126)))), ((int)(((byte)(248)))));
             this.btnUpdateStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdateStatus.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnUpdateStatus.ForeColor = System.Drawing.Color.White;
-            this.btnUpdateStatus.Location = new System.Drawing.Point(827, 119);
-            this.btnUpdateStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdateStatus.Location = new System.Drawing.Point(828, 67);
+            this.btnUpdateStatus.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdateStatus.Name = "btnUpdateStatus";
-            this.btnUpdateStatus.Size = new System.Drawing.Size(157, 42);
+            this.btnUpdateStatus.Size = new System.Drawing.Size(157, 35);
             this.btnUpdateStatus.TabIndex = 10;
             this.btnUpdateStatus.Text = "Изменить статус";
             this.btnUpdateStatus.UseVisualStyleBackColor = false;
@@ -368,17 +370,18 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(124)))), ((int)(((byte)(145)))));
+            this.btnEdit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(109)))), ((int)(((byte)(130)))));
             this.btnEdit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(112)))), ((int)(((byte)(133)))));
             this.btnEdit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(136)))), ((int)(((byte)(157)))));
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdit.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(989, 121);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEdit.Location = new System.Drawing.Point(1002, 67);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(74, 41);
+            this.btnEdit.Size = new System.Drawing.Size(79, 47);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Правка";
             this.btnEdit.UseVisualStyleBackColor = false;
@@ -386,17 +389,18 @@
             // 
             // btnDetails
             // 
-            this.btnDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(124)))), ((int)(((byte)(145)))));
+            this.btnDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(120)))), ((int)(((byte)(140)))));
             this.btnDetails.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDetails.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(193)))), ((int)(((byte)(207)))));
             this.btnDetails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(238)))), ((int)(((byte)(246)))));
             this.btnDetails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(247)))), ((int)(((byte)(252)))));
             this.btnDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDetails.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDetails.ForeColor = System.Drawing.Color.White;
-            this.btnDetails.Location = new System.Drawing.Point(1068, 121);
-            this.btnDetails.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDetails.Location = new System.Drawing.Point(1085, 67);
+            this.btnDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnDetails.Name = "btnDetails";
-            this.btnDetails.Size = new System.Drawing.Size(74, 42);
+            this.btnDetails.Size = new System.Drawing.Size(79, 47);
             this.btnDetails.TabIndex = 12;
             this.btnDetails.Text = "Детали";
             this.btnDetails.UseVisualStyleBackColor = false;
@@ -410,11 +414,12 @@
             this.btnDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(194)))), ((int)(((byte)(58)))), ((int)(((byte)(58)))));
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(91)))), ((int)(((byte)(91)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(1147, 121);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Location = new System.Drawing.Point(1168, 67);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(74, 42);
+            this.btnDelete.Size = new System.Drawing.Size(79, 47);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Удалить";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -437,7 +442,7 @@
             this.dateFrom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateFrom.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateFrom.Location = new System.Drawing.Point(482, 655);
-            this.dateFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateFrom.Margin = new System.Windows.Forms.Padding(2);
             this.dateFrom.Name = "dateFrom";
             this.dateFrom.Size = new System.Drawing.Size(105, 26);
             this.dateFrom.TabIndex = 14;
@@ -459,7 +464,7 @@
             this.dateTo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dateTo.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTo.Location = new System.Drawing.Point(622, 655);
-            this.dateTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTo.Margin = new System.Windows.Forms.Padding(2);
             this.dateTo.Name = "dateTo";
             this.dateTo.Size = new System.Drawing.Size(105, 26);
             this.dateTo.TabIndex = 16;
@@ -475,7 +480,7 @@
             this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReport.ForeColor = System.Drawing.Color.White;
             this.btnReport.Location = new System.Drawing.Point(730, 652);
-            this.btnReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(2);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(92, 30);
             this.btnReport.TabIndex = 17;
@@ -494,7 +499,7 @@
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogout.ForeColor = System.Drawing.Color.White;
             this.btnLogout.Location = new System.Drawing.Point(827, 652);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(282, 30);
             this.btnLogout.TabIndex = 18;
