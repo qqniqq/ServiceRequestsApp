@@ -13,6 +13,7 @@ namespace ServiceRequestsApp
 
         private readonly string currentUser;
         private readonly string currentRole;
+        private const string statusPlaceholderText = "Изменить статус";
 
         public MainForm(string fullName, string role)
         {
@@ -33,6 +34,7 @@ namespace ServiceRequestsApp
             dateTo.Value = DateTime.Today;
 
             ApplyRolePermissions();
+            ConfigureStatusSelector();
             ConfigureTable();
             LoadRequests();
         }
@@ -42,13 +44,21 @@ namespace ServiceRequestsApp
             bool isItSpecialist = currentRole == "Специалист IT";
 
             comboStatus.Visible = isItSpecialist;
-            btnUpdateStatus.Visible = isItSpecialist;
+            btnUpdateStatus.Visible = false;
             btnReport.Visible = isItSpecialist;
             btnEdit.Visible = isItSpecialist;
             btnDelete.Visible = isItSpecialist;
 
             // Детали полезны всем ролям.
             btnDetails.Visible = true;
+        }
+
+        private void ConfigureStatusSelector()
+        {
+            comboStatus.DropDownStyle = ComboBoxStyle.DropDown;
+            comboStatus.Text = statusPlaceholderText;
+            comboStatus.SelectedIndexChanged -= comboStatus_SelectedIndexChanged;
+            comboStatus.SelectedIndexChanged += comboStatus_SelectedIndexChanged;
         }
 
         private void ConfigureTable()
@@ -203,6 +213,16 @@ namespace ServiceRequestsApp
 
         private void btnUpdateStatus_Click(object sender, EventArgs e)
         {
+            UpdateSelectedRequestStatus();
+        }
+
+        private void comboStatus_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateSelectedRequestStatus();
+        }
+
+        private void UpdateSelectedRequestStatus()
+        {
             if (currentRole != "Специалист IT")
             {
                 MessageBox.Show("Недостаточно прав для изменения статуса заявки");
@@ -216,7 +236,7 @@ namespace ServiceRequestsApp
                 return;
             }
 
-            if (string.IsNullOrWhiteSpace(comboStatus.Text))
+            if (comboStatus.SelectedIndex < 0 || string.IsNullOrWhiteSpace(comboStatus.Text) || comboStatus.Text == statusPlaceholderText)
             {
                 MessageBox.Show("Выберите новый статус");
                 return;
@@ -233,6 +253,8 @@ namespace ServiceRequestsApp
             }
 
             LoadRequests();
+            comboStatus.SelectedIndex = -1;
+            comboStatus.Text = statusPlaceholderText;
             MessageBox.Show("Статус заявки изменён");
         }
 
