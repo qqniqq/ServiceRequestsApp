@@ -122,7 +122,7 @@
     <value>17, 164</value>
   </data>
   <data name="txtFullName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 30</value>
+    <value>237, 26</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="txtFullName.TabIndex" type="System.Int32, mscorlib">
@@ -144,7 +144,7 @@
     <value>18, 280</value>
   </data>
   <data name="txtContact.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 30</value>
+    <value>238, 26</value>
   </data>
   <data name="txtContact.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -165,7 +165,7 @@
     <value>18, 396</value>
   </data>
   <data name="txtDescription.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 30</value>
+    <value>238, 26</value>
   </data>
   <data name="txtDescription.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -195,7 +195,7 @@
     <value>290, 164</value>
   </data>
   <data name="comboPriority.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 30</value>
+    <value>242, 27</value>
   </data>
   <data name="comboPriority.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -243,7 +243,7 @@
     <value>14, 139</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>156, 22</value>
+    <value>125, 19</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -270,7 +270,7 @@
     <value>14, 197</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 22</value>
+    <value>112, 19</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -297,7 +297,7 @@
     <value>14, 255</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 22</value>
+    <value>146, 19</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -324,7 +324,7 @@
     <value>14, 313</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>178, 22</value>
+    <value>144, 19</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -351,7 +351,7 @@
     <value>14, 371</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>186, 22</value>
+    <value>151, 19</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -378,7 +378,7 @@
     <value>286, 139</value>
   </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 22</value>
+    <value>131, 19</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -426,7 +426,7 @@
     <value>18, 222</value>
   </data>
   <data name="comboDepartment.Size" type="System.Drawing.Size, System.Drawing">
-    <value>237, 30</value>
+    <value>237, 27</value>
   </data>
   <data name="comboDepartment.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -450,7 +450,7 @@
     <value>286, 197</value>
   </data>
   <data name="label7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>246, 22</value>
+    <value>200, 19</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -495,7 +495,7 @@
     <value>17, 338</value>
   </data>
   <data name="comboProblemType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 30</value>
+    <value>238, 27</value>
   </data>
   <data name="comboProblemType.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -525,7 +525,7 @@
     <value>290, 222</value>
   </data>
   <data name="comboSpecialist.Size" type="System.Drawing.Size, System.Drawing">
-    <value>242, 30</value>
+    <value>242, 27</value>
   </data>
   <data name="comboSpecialist.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
@@ -574,7 +574,7 @@
         AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
         LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
         ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAC+
-        CwAAAk1TRnQBSQFMAwEBAAEIAQABCAEAASABAAEgAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
+        CwAAAk1TRnQBSQFMAwEBAAEQAQABEAEAASABAAEgAQAE/wEJAQAI/wFCAU0BNgEEBgABNgEEAgABKAMA
         AYADAAEgAwABAQEAAQgGAAEQGAABgAIAAYADAAKAAQABgAMAAYABAAGAAQACgAIAA8ABAAHAAdwBwAEA
         AfABygGmAQABMwUAATMBAAEzAQABMwEAAjMCAAMWAQADHAEAAyIBAAMpAQADVQEAA00BAANCAQADOQEA
         AYABfAH/AQACUAH/AQABkwEAAdYBAAH/AewBzAEAAcYB1gHvAQAB1gLnAQABkAGpAa0CAAH/ATMDAAFm
@@ -611,21 +611,25 @@
         AfAB8gHzAe8BrgH3AvIE8wP0AvMB9AH/AfRgAAH/AQkBzwG0AroDtQK6ArsBkgH3AboBkAHbArsB9wW7
         Ae8BGQEIAeIC9GAAAf8B7wGuAbMBiwGRAxIBkANsAZABEgWQAeoFkAFtArsBCAL0YAAB/wHvAa4BtAHa
         AZEDEQGRBLsBtQG7A+EBuwG1Aa4DbAGQAroBCQEIAvRgAAH/Ae8BbQG0AdsBiwMAAZEL4gGRAwABkAHo
-        AboBtAEJAvRgAAH/Ae8BbQG0AdsBiwMAAa4D4gHuA5MB7gPiAbsBkQFmAQABkAHoAboBtAEJAvRgAAH/
+        AboBtAEJAvRgAAH/Ae8BbQG0AdsBiwMAAa4D4gG8A5MBvAPiAbsBkQFmAQABkAHoAboBtAEJAvRgAAH/
         Ae8BbQG0AdsBiwMAAa4DGQGTAkYB+QGTAxkC4gGRAQABkAHoAboBtAEJAvRgAAH/Ae8BbQGRAboBtAKR
         AZABuwMZAZMCRgFBARYDGQG1A5ECkAGRAbQBCQL0YAAB/wHvAW0BkQG6AdwB4gEAAeEBwQO8AY4CRgFB
         ARYDvAFtAQABkQHiAZEBAAGGAbQBCQL0YAAB/wHvAa4BtAHbAeEB4gIAAQgCBwGTARYBFwJqARcDkwHt
-        AZEBuwHiAZEBAAGGAbQBCQL0YAAB/wHvAa4B2wHoAeEC4gEZAe4BkwEWCUcBBwPiAZEBAAGGAbQBCQL0
+        AZEBuwHiAZEBAAGGAbQBCQL0YAAB/wHvAa4B2wHoAeEC4gEZAbwBkwEWCUcBBwPiAZEBAAGGAbQBCQL0
         YAAB/wHvAesBugLhAuIBGQG8AQcCkwHjA0cBFwPjAe0BkQG7AQABkQEAAYYBtAEJAvRgAAH/AQcB6wGd
         AbsFGQG8AgcBkwNHAeMDlAFuAQABkAHhAZABAAGGAbQBCQL0YAAB/wEHAesBuwEJAhkBuwGuAesBbQH3
-        AfEBlANHARYDvQHrAQABkQEAAZEBAAGGAbQBCQL0YAAB/wEHAesBugEJAeEBGQGuAwAB+AH/AZQDRwGU
-        AvQB/wH4AQABkQHiAZEBAAGGAbQBCQL0YAAB/wHvAesBugEJAeEBGQGuAwAB+AH/Ab0DlAG9A/8B+AEA
-        Aa4B4gG7AZEBtAHVAQkC9GAAAf8B7wGuAgkB4QEZAa4DAAH4Af8B9APzAfQD/wH4AQABrgEZAuIBCQHP
+        AfEBlANHARYDvQHrAQABkQEAAZEBAAGGAbQBCQL0YAAB/wEHAesBugEJAeEBGQGuAwAB7AH/AZQDRwGU
+        AvQB/wHsAQABkQHiAZEBAAGGAbQBCQL0YAAB/wHvAesBugEJAeEBGQGuAwAB7AH/Ab0DlAG9A/8B7AEA
+        Aa4B4gG7AZEBtAHVAQkC9GAAAf8B7wGuAgkB4QEZAa4DAAHsAf8B9APzAfQD/wHsAQABrgEZAuIBCQHP
         AQkC9GAAAf8B7wHrAbsCCQEZAbsCkAFsAboG4QLBAeEBugFsAbQBCQHhAcEBCQHVAQkC9GAAAf8BBwHr
         ArQBCQO7AeEPugHhAbsBCQG0AQkC9GAAAf8B8QHvAbUBuhe7AboBvAH/AfRgAAH/AfQB8wG8Ge8B8QH/
         AfRgAAL/AfQB8hnxAfMB/wH0YAAf/wH0YAABQgFNAT4HAAE+AwABKAMAAYADAAEgAwABAQEAAQEGAAEC
         FgAD//8A/wADAAs=
 </value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="labelPageTitle.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="labelPageTitle.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -634,10 +638,10 @@
     <value>Segoe UI, 16pt, style=Bold</value>
   </data>
   <data name="labelPageTitle.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 45</value>
+    <value>163, 45</value>
   </data>
   <data name="labelPageTitle.Size" type="System.Drawing.Size, System.Drawing">
-    <value>280, 37</value>
+    <value>226, 30</value>
   </data>
   <data name="labelPageTitle.TabIndex" type="System.Int32, mscorlib">
     <value>18</value>
@@ -663,12 +667,11 @@
   <data name="$this.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Center</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>559, 497</value>
+    <value>550, 497</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Times New Roman, 12pt</value>
