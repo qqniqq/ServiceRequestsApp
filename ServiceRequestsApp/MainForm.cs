@@ -365,29 +365,7 @@ ORDER BY Id DESC";
             MessageBox.Show("Заявка обновлена");
         }
 
-        private void btnDetails_Click(object sender, EventArgs e)
-        {
-            if (dataGridViewRequests.CurrentRow == null)
-            {
-                MessageBox.Show("Выберите заявку для просмотра деталей");
-                return;
-            }
-
-            DataGridViewRow row = dataGridViewRequests.CurrentRow;
-            string details =
-                $"№: {row.Cells["Id"].Value}\n" +
-                $"ФИО: {row.Cells["FullName"].Value}\n" +
-                $"Подразделение: {row.Cells["Department"].Value}\n" +
-                $"Контакты: {row.Cells["Contact"].Value}\n" +
-                $"Дата и время: {row.Cells["DateCreated"].Value}\n" +
-                $"Тип неисправности: {row.Cells["ProblemType"].Value}\n" +
-                $"Описание: {row.Cells["Description"].Value}\n" +
-                $"Приоритет: {row.Cells["Priority"].Value}\n" +
-                $"Специалист: {row.Cells["Specialist"].Value}\n" +
-                $"Статус: {row.Cells["Status"].Value}";
-
-            MessageBox.Show(details, "Детали заявки", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
+       
 
         private string PromptForText(string title, string label, string initialValue)
         {
@@ -590,6 +568,30 @@ WHERE DateCreated >= @FromDate AND DateCreated <= @ToDate";
         private void comboStatus_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDetails_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridViewRequests.CurrentRow == null)
+            {
+                MessageBox.Show("Выберите заявку для просмотра деталей");
+                return;
+            }
+
+            DataGridViewRow row = dataGridViewRequests.CurrentRow;
+            string details =
+                $"№: {row.Cells["Id"].Value}\n" +
+                $"ФИО: {row.Cells["FullName"].Value}\n" +
+                $"Подразделение: {row.Cells["Department"].Value}\n" +
+                $"Контакты: {row.Cells["Contact"].Value}\n" +
+                $"Дата и время: {row.Cells["DateCreated"].Value}\n" +
+                $"Тип неисправности: {row.Cells["ProblemType"].Value}\n" +
+                $"Описание: {row.Cells["Description"].Value}\n" +
+                $"Приоритет: {row.Cells["Priority"].Value}\n" +
+                $"Специалист: {row.Cells["Specialist"].Value}\n" +
+                $"Статус: {row.Cells["Status"].Value}";
+
+            MessageBox.Show(details, "Детали заявки", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
