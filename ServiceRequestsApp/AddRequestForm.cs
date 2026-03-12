@@ -94,9 +94,9 @@ namespace ServiceRequestsApp
                 txtDescription.Focus();
                 return;
             }
-            if (txtDescription.Text.Trim().Length < 10)
+            if (txtDescription.Text.Trim().Length < 5)
             {
-                MessageBox.Show("Описание проблемы должно быть не менее 10 символов");
+                MessageBox.Show("Описание проблемы должно быть не менее 5 символов");
                 txtDescription.Focus();
                 return;
             }

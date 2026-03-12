@@ -32,9 +32,11 @@ namespace ServiceRequestsApp
             labelMenuDepartments.Visible = false;
             labelMenuReports.Visible = false;
             labelMenuUsers.Visible = false;
+            lblDateTo.Visible = false;
+            lblDateFrom.Visible = false;
 
-            dateFrom.Value = DateTime.Today.AddDays(-7);
-            dateTo.Value = DateTime.Today;
+            dateFrom.Visible = false;
+            dateTo.Visible = false;
 
             ApplyRolePermissions();
             InitializeFilters();
