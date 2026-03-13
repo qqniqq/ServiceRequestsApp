@@ -48,7 +48,7 @@ namespace ServiceRequestsApp
         {
             ConfigureFilterCombo(comboFilterStatus, 640, "Статус: все", new[] { "Новая", "В работе", "Выполнена" });
             ConfigureFilterCombo(comboFilterPriority, 805, "Приоритет: все", new[] { "Высокий", "Средний", "Низкий" });
-            ConfigureFilterCombo(comboFilterSpecialist, 970, "Специалист: все", new[] { "Петров А.А.", "Сидоров И.В." });
+            ConfigureFilterCombo(comboFilterSpecialist, 970, "Специалист: все", new[] { "Петров А.А.", "Сидоров И.В.", "Каменский К.К." });
 
             Controls.Add(comboFilterStatus);
             Controls.Add(comboFilterPriority);
